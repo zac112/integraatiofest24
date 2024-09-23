@@ -2,7 +2,6 @@
 body, html {
     margin: 0;
     padding: 0;
-    height: 100%;
     font-family: Arial, sans-serif;
 }
 
@@ -10,14 +9,15 @@ body {
     background: url('images/background.png') no-repeat center center fixed;
     background-size: cover;
     display: flex;
+	flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.container {    
+.container {
+	position:absolute;
+	
     padding: 20px;    
-    display: flex;
-    flex-direction: column;
     max-width: 90%;
     width: 800px;
 }
@@ -58,10 +58,10 @@ body {
 .columns {
     display: flex;
     justify-content: space-between;
-	  border-top: #ccc 5px solid;
-  border-right: #ccc 5px solid;
-  border-bottom: #777 5px solid;
-  border-left: #777 5px solid;
+	border-top: #ccc 5px solid;
+    border-right: #ccc 5px solid;
+    border-bottom: #777 5px solid;
+    border-left: #777 5px solid;
 	background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */	
 
 }
@@ -113,12 +113,13 @@ body {
 @media (max-width: 768px) {
 
     .container {
-        max-height: 800px; /* Allows container to grow beyond the viewport if needed */
+        /*max-height: 800px; /* Allows container to grow beyond the viewport if needed */
+		position:static;
     }
 
     .columns {
         flex-direction: column;
-        align-items: center;
+        align-items: center;		
     }
     
     .column {
@@ -142,8 +143,43 @@ body {
 
 @media (max-width: 400px) {
 	.header-row {
+		margin-top: 20px;
 		color:blue;
 		font-size:40px;
 		text-align: center;
 	}
+	
+	.first-row {
+        height: 40px;
+		padding: 5px;
+    }
+}
+
+/*Liikenne*/
+
+/* Viewport container */
+.viewport {
+    width: 100%; /* The width of the viewport */
+    height: 100px; /* The height of the viewport */
+    overflow: hidden;
+    position: relative;
+}
+
+/* Image that moves */
+.moving-image {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    animation: move-left-right 5s linear infinite; /* Animation to move image */
+}
+
+/* Animation for the image */
+@keyframes move-left-right {
+    0% {
+        left: -100%; /* Start off-screen */
+    }
+    100% {
+        left: 100%; /* End off-screen on the right */
+    }
 }
