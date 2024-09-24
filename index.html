@@ -6,6 +6,11 @@
     <title>Flexbox Layout</title>
     <link rel="stylesheet" href="styles.css">
 	<script src="script.js"></script>
+	<script>function clickElement(elmnt){
+		elmnt.style.display='block';
+		elmnt.style.zIndex=curZ+1;
+		elmnt.scrollIntoView()
+	}</script>
 </head>
 <body>
 	
@@ -196,13 +201,11 @@
 						<p>Kartta ja julkinen liikenne</p>
 					</a>-->
 					
-					<div style="no_link" onclick="document.getElementById('aikataulu').style.display='block';
-					document.getElementById('aikataulu').style.zIndex=curZ+1;">
+					<div onclick="clickElement(document.getElementById('aikataulu'))">
 						<img src="images/calendar.png" alt="Image 1">
 						<p>Aikataulu</p>
 					</div>
-					<div onclick="document.getElementById('liikenne').style.display='block';
-					document.getElementById('liikenne').style.zIndex=curZ+1;">
+					<div onclick="clickElement(document.getElementById('liikenne'))">
 						<img src="images/shield.png" alt="Image 1">
 						<p>Kartta ja julkinen liikenne</p>
 					</div>
@@ -213,8 +216,7 @@
 						<p>Kaupunki ja excut</p>
 					</a>-->
 					
-					<div onclick="document.getElementById('kaupunki').style.display='block';
-					document.getElementById('kaupunki').style.zIndex=curZ+1;">
+					<div onclick="clickElement(document.getElementById('kaupunki'))">
 						<img src="images/posankka.png" alt="Image 1">
 						<p>Kaupunki ja excut</p>
 					</div>
@@ -229,15 +231,12 @@
 						<img src="images/phone.png" alt="Image 6">
 						<p>Yhteystiedot</p>
 					</a>-->
-					<div onclick="document.getElementById('majoitus').style.display='block';
-					document.getElementById('majoitus').style.zIndex=curZ+1;">
+					<div onclick="clickElement(document.getElementById('majoitus'));">
 						<img src="images/moon.png" alt="Image 1">
 						<p>Majoitusinfo</p>
 					</div>
 					<div 
-					onclick="document.getElementById('yhteys').style.display='block';
-					document.getElementById('yhteys').style.zIndex=curZ+1;
-					">
+					onclick="clickElement(document.getElementById('yhteys'))">
 						<img src="images/phone.png" alt="Image 1">
 						<p>Yhteystiedot</p>
 					</div>
