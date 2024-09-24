@@ -6,12 +6,170 @@
     <title>Flexbox Layout</title>
     <link rel="stylesheet" href="styles.css">
 	<script src="script.js"></script>
+	<script src="aikataulu.js"></script>
 </head>
 <body>
 	
 	<div class="header-row">
 		<p>Integraatiofest 2024</p>
 	</div>
+	
+	<div class="container" id="aikataulu" style="display:none;">		
+		<div class="shadow">
+			<!-- First row with two images -->
+			<div class="row first-row">
+				<p class="white_text">FESTIEN AIKATAULUT</p>
+				<div class="small_buttons">
+					<!--<div class="small_button">X</div>
+					<div class="small_button">_</div>-->
+					<img src="images/underscore.png" alt="Underscore">
+					<img src="images/cross.png" alt="Cross" onclick="document.getElementById('aikataulu').style.display='none';">
+				</div>
+			</div>
+			
+			<!-- Three columns with two images each and text -->
+			<div class="row columns">
+				<div class="column">					
+				</div>			
+				<div class="column center-column">
+					<p>Integraatiofest pidetään 2024 Turussa! Turun yliopisto herää lokakuiseen loistoon usean opiskelijan tullessa kuuntelemaan kiinnostavia esityksiä ja verkostoitumaan. 					
+					</p>
+					
+					<p>
+					Tapahtuma alkaa perjantaina 25.10 ja pois pitäisi lähteä sunnuntaina 27.10. Tarkempi aikataulu esityksineen piakkoin.
+					</p>
+										
+				</div>
+				<div class="column">					
+				</div>
+			</div>
+		</div>
+    </div>
+
+	<div class="container" id="liikenne" style="display:none;">		
+		<div class="shadow">
+			<!-- First row with two images -->
+			<div class="row first-row">
+				<p class="white_text">LIIKENTEEN HOITAA FÖLI</p>
+				<div class="small_buttons">
+					<!--<div class="small_button">X</div>
+					<div class="small_button">_</div>-->
+					<img src="images/underscore.png" alt="Underscore">
+					<img src="images/cross.png" alt="Cross" onclick="document.getElementById('liikenne').style.display='none';">
+				</div>
+			</div>
+			
+			<!-- Three columns with two images each and text -->
+			<div class="row columns">
+				<div class="column">	
+					<div class="viewport">
+					<img src="images/bus.png" alt="Moving Image" class="moving-image" style="animation-delay:2.5s;left:-100%">
+					</div>				
+				</div>			
+				<div class="column center-column">
+					<p>Turku on pieni kaupunki suurella sydämellä. Kaikkialle keskusta-alueella pääsee kävellen. Jos kuitenkin haluat ajella bussilla, Fölin kyydillä pääsee!
+					</p>
+					
+					<p>
+					Katsele Fölin aikataulut ja pysäkit Fölin sivuilta: <a target="_blank" href="https://www.foli.fi/fi">www.foli.fi</a>
+					</p>
+										
+				</div>
+				<div class="column">	
+					<div class="viewport">
+					<img src="images/bus.png" alt="Moving Image" class="moving-image">
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+	
+	<div class="container" id="kaupunki" style="display:none;">		
+		<div class="shadow">
+			<!-- First row with two images -->
+			<div class="row first-row">
+				<p class="white_text">KAUPUNKI (TURKU)</p>
+				<div class="small_buttons">
+					<!--<div class="small_button">X</div>
+					<div class="small_button">_</div>-->
+					<img src="images/underscore.png" alt="Underscore">
+					<img src="images/cross.png" alt="Cross" onclick="document.getElementById('kaupunki').style.display='none';">
+				</div>
+			</div>
+			
+			<!-- Three columns with two images each and text -->
+			<div class="row columns">
+				<div class="column">					
+				</div>			
+				<div class="column center-column">
+					<p>Turusta on olemassa kartta ja sitä voi katsella vaikka googlesta <a target="_blank" href="https://www.google.com/maps/@60.451393,22.2782131,15.75z?entry=ttu&g_ep=EgoyMDI0MDkyMi4wIKXMDSoASAFQAw%3D%3D">Täältä</a>
+					
+					Turun yliopisto sijaitsee aitiopaikalla aivan joen rannalla ison kukkulan päällä. Sinne pääsee vaikka tiedon portaita kiipeämällä. 
+					</p>					
+					
+					<p>Yliopisto on myös tiiviisti yliopistonmäellä, vaikkakin joitakin luentoja pidetään myös ICT-talolla.</p>
+										
+				</div>
+				<div class="column">					
+				</div>
+			</div>
+		</div>
+    </div>
+
+	<div class="container" id="majoitus" style="display:none;">		
+		<div class="shadow">
+			<!-- First row with two images -->
+			<div class="row first-row">
+				<p class="white_text">MAJOITUSJUTTUJA</p>
+				<div class="small_buttons">
+					<!--<div class="small_button">X</div>
+					<div class="small_button">_</div>-->
+					<img src="images/underscore.png" alt="Underscore">
+					<img src="images/cross.png" alt="Cross" onclick="document.getElementById('majoitus').style.display='none';">
+				</div>
+			</div>
+			
+			<!-- Three columns with two images each and text -->
+			<div class="row columns">
+				<div class="column">					
+				</div>			
+				<div class="column center-column">
+					<p>Tapahtumaan osallistujat pääsevät myös nukkumaan. Nukkuminen tapahtuu mieluusti Turun Steiner-koulussa hieman keskustan sykkeen ulkopuolella. Tapahtuman järjestäjät hoitavat opastamisen.</p>
+										
+				</div>
+				<div class="column">					
+				</div>
+			</div>
+		</div>
+    </div>
+
+	<div class="container" id="yhteys" style="display:none;">		
+		<div class="shadow">
+			<!-- First row with two images -->
+			<div class="row first-row">
+				<p class="white_text">YHTEYSTIEDOT</p>
+				<div class="small_buttons">
+					<!--<div class="small_button">X</div>
+					<div class="small_button">_</div>-->
+					<img src="images/underscore.png" alt="Underscore">
+					<img src="images/cross.png" alt="Cross" onclick="document.getElementById('yhteys').style.display='none';">
+				</div>
+			</div>
+			
+			<!-- Three columns with two images each and text -->
+			<div class="row columns">
+				<div class="column">					
+				</div>			
+				<div class="column center-column">
+					<p>Integraatiofesteillä oli tänä vuonna tekijöitä. Kiitokset, ruusut ja miksei risutkin voi lähettää suoraan <a href="https://delta.utu.fi/yhdistys/yhteystiedot">Turun yliopiston matemaattisten ja fysikaalisten tieteiden opiskelijoiden yhdistys Delta ry:lle </a> </p>
+										
+				</div>
+				<div class="column">					
+				</div>
+			</div>
+		</div>
+    </div>
+	
     <div class="container" id="container">
 		
 		<div class="shadow">
@@ -29,41 +187,87 @@
 			<!-- Three columns with two images each and text -->
 			<div class="row columns">
 				<div class="column">
-					<a class="no_link" href="./aikataulu.html">
+					<!--<a class="no_link" href="./aikataulu.html">
 						<img src="images/calendar.png" alt="Image 1">
 						<p>Aikataulu</p>
 					</a>
+					
 					<a href="./liikenne.html" class="no_link">
 						<img src="images/shield.png" alt="Image 2">
 						<p>Kartta ja julkinen liikenne</p>
-					</a>
+					</a>-->
+					
+					<div style="no_link" onclick="document.getElementById('aikataulu').style.display='block';
+					document.getElementById('aikataulu').style.zIndex=curZ+1;">
+						<img src="images/calendar.png" alt="Image 1">
+						<p>Aikataulu</p>
+					</div>
+					<div onclick="document.getElementById('liikenne').style.display='block';
+					document.getElementById('liikenne').style.zIndex=curZ+1;">
+						<img src="images/shield.png" alt="Image 1">
+						<p>Kartta ja julkinen liikenne</p>
+					</div>
 				</div>			
 				<div class="column center-column">
-					<a href="/" class="no_link">
+					<!--<a href="/" class="no_link">
 						<img src="images/posankka.png" alt="Image 3">
 						<p>Kaupunki ja excut</p>
-					</a>
+					</a>-->
+					
+					<div onclick="document.getElementById('kaupunki').style.display='block';
+					document.getElementById('kaupunki').style.zIndex=curZ+1;">
+						<img src="images/posankka.png" alt="Image 1">
+						<p>Kaupunki ja excut</p>
+					</div>
 					
 				</div>
 				<div class="column">
-					<a href="/" class="no_link">
+					<!--<a href="/" class="no_link">
 						<img src="images/moon.png" alt="Image 5">
 						<p>Majoitusinfo</p>
 					</a>
 					<a href="/" class="no_link">
 						<img src="images/phone.png" alt="Image 6">
 						<p>Yhteystiedot</p>
-					</a>
+					</a>-->
+					<div onclick="document.getElementById('majoitus').style.display='block';
+					document.getElementById('majoitus').style.zIndex=curZ+1;">
+						<img src="images/moon.png" alt="Image 1">
+						<p>Majoitusinfo</p>
+					</div>
+					<div 
+					onclick="document.getElementById('yhteys').style.display='block';
+					document.getElementById('yhteys').style.zIndex=curZ+1;
+					">
+						<img src="images/phone.png" alt="Image 1">
+						<p>Yhteystiedot</p>
+					</div>
 				</div>
 			</div>
 		</div>
     </div>
+		
 	<script> 
-	var cont = document.getElementById("container")
+	var cont = document.getElementsByClassName("container")
 	var title = document.getElementsByClassName("header-row")[0]
-	dragElement(cont);
-	cont.style.top = title.offsetTop+150+"px";
-	cont.style.left = title.offsetLeft+"px";
+	for (var i=0;i<cont.length;i++){
+		dragElement(cont[i]);
+		registerTouch(cont[i]);
+		//cont[i].style.zIndex = cont.length-i;
+		cont[i].style.top = title.offsetTop+150+"px";
+		cont[i].style.left = title.offsetLeft+"px";		
+		
+		//console.log(cont[i]);
+		//cont[i].addEventListener("touchstart", dragElement);
+		//el.addEventListener("touchend", handleEnd);	
+		//el.addEventListener("touchcancel", handleCancel);
+		//el.addEventListener("touchmove", handleMove);
+	  
+	}
+	curZ = cont.length;
+	
+	
+	  
 	
 	</script>
 </body>

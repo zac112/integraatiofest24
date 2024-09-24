@@ -17,6 +17,7 @@ body {
 .container {
 	position:absolute;
 	
+	cursor:grab;
     padding: 20px;    
     max-width: 90%;
     width: 800px;
@@ -100,7 +101,7 @@ body {
 
 .no_link {
 	all:unset;
-	cursor:grab;
+	cursor:zoom-in;
 }
 
 .small_buttons {
