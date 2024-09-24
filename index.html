@@ -6,7 +6,6 @@
     <title>Flexbox Layout</title>
     <link rel="stylesheet" href="styles.css">
 	<script src="script.js"></script>
-	<script src="aikataulu.js"></script>
 </head>
 <body>
 	
@@ -250,25 +249,15 @@
 	<script> 
 	var cont = document.getElementsByClassName("container")
 	var title = document.getElementsByClassName("header-row")[0]
-	for (var i=0;i<cont.length;i++){
-		dragElement(cont[i]);
-		registerTouch(cont[i]);
-		//cont[i].style.zIndex = cont.length-i;
+	for (var i=0;i<cont.length;i++){	
+		if (window.screen.availWidth > 768 ) {
+			dragElement(cont[i]);
+			registerTouch(cont[i]);
+		}
 		cont[i].style.top = title.offsetTop+150+"px";
 		cont[i].style.left = title.offsetLeft+"px";		
-		
-		//console.log(cont[i]);
-		//cont[i].addEventListener("touchstart", dragElement);
-		//el.addEventListener("touchend", handleEnd);	
-		//el.addEventListener("touchcancel", handleCancel);
-		//el.addEventListener("touchmove", handleMove);
-	  
 	}
-	curZ = cont.length;
-	
-	
-	  
-	
+	curZ = cont.length;	
 	</script>
 </body>
 </html>

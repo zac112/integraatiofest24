@@ -28,7 +28,6 @@ function dragElement(elmnt) {
   }
 
   function elementDrag(e) {
-	  console.log("draggin");
     e = e || window.event;
     e.preventDefault();
     // calculate the new cursor position:
@@ -60,6 +59,7 @@ function registerTouch(elmnt){
 		currTouch = e; 
 	    pos3 = e.touches[0].screenX;
 		pos4 = e.touches[0].screenY;
+		curZ += 1
 	}	
 	function handleTouchMove(e) {
 		if (currTouch == null) return;

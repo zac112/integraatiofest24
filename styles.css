@@ -19,8 +19,8 @@ body {
 	
 	cursor:grab;
     padding: 20px;    
-    max-width: 90%;
-    width: 800px;
+    max-width: 100%;
+    width: 750px;
 }
 
 .header-row {
@@ -116,6 +116,7 @@ body {
     .container {
         /*max-height: 800px; /* Allows container to grow beyond the viewport if needed */
 		position:static;
+		width: 400px;
     }
 
     .columns {
