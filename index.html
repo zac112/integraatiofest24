@@ -6,10 +6,16 @@
     <title>Flexbox Layout</title>
     <link rel="stylesheet" href="styles.css">
 	<script src="script.js"></script>
-	<script>function clickElement(elmnt){
-		elmnt.style.display='block';
+	<script>
+	function closeWindow(el){
+		el.classList.toggle('open_window');
+	}
+	
+	function clickElement(el, elmnt, win){
+		//elmnt.style.display='block';
+		elmnt.classList.toggle('open_window');
 		elmnt.style.zIndex=curZ+1;
-		elmnt.scrollIntoView()
+		elmnt.scrollIntoView()		
 	}</script>
 </head>
 <body>
@@ -18,7 +24,7 @@
 		<p>Integraatiofest 2024</p>
 	</div>
 	
-	<div class="container" id="aikataulu" style="display:none;">		
+	<div class="container scaling-div" id="aikataulu">		
 		<div class="shadow">
 			<!-- First row with two images -->
 			<div class="row first-row">
@@ -27,7 +33,7 @@
 					<!--<div class="small_button">X</div>
 					<div class="small_button">_</div>-->
 					<img src="images/underscore.png" alt="Underscore">
-					<img src="images/cross.png" alt="Cross" onclick="document.getElementById('aikataulu').style.display='none';">
+					<img src="images/cross.png" alt="Cross" onclick="closeWindow(document.getElementById('aikataulu'));">
 				</div>
 			</div>
 			
@@ -50,7 +56,7 @@
 		</div>
     </div>
 
-	<div class="container" id="liikenne" style="display:none;">		
+	<div class="container scaling-div" id="liikenne" >		
 		<div class="shadow">
 			<!-- First row with two images -->
 			<div class="row first-row">
@@ -59,7 +65,7 @@
 					<!--<div class="small_button">X</div>
 					<div class="small_button">_</div>-->
 					<img src="images/underscore.png" alt="Underscore">
-					<img src="images/cross.png" alt="Cross" onclick="document.getElementById('liikenne').style.display='none';">
+					<img src="images/cross.png" alt="Cross" onclick="closeWindow(document.getElementById('liikenne'));">
 				</div>
 			</div>
 			
@@ -88,7 +94,7 @@
 		</div>
     </div>
 	
-	<div class="container" id="kaupunki" style="display:none;">		
+	<div class="container scaling-div" id="kaupunki">		
 		<div class="shadow">
 			<!-- First row with two images -->
 			<div class="row first-row">
@@ -97,7 +103,7 @@
 					<!--<div class="small_button">X</div>
 					<div class="small_button">_</div>-->
 					<img src="images/underscore.png" alt="Underscore">
-					<img src="images/cross.png" alt="Cross" onclick="document.getElementById('kaupunki').style.display='none';">
+					<img src="images/cross.png" alt="Cross" onclick="closeWindow(document.getElementById('kaupunki'))">
 				</div>
 			</div>
 			
@@ -120,7 +126,7 @@
 		</div>
     </div>
 
-	<div class="container" id="majoitus" style="display:none;">		
+	<div class="container scaling-div" id="majoitus">		
 		<div class="shadow">
 			<!-- First row with two images -->
 			<div class="row first-row">
@@ -129,7 +135,7 @@
 					<!--<div class="small_button">X</div>
 					<div class="small_button">_</div>-->
 					<img src="images/underscore.png" alt="Underscore">
-					<img src="images/cross.png" alt="Cross" onclick="document.getElementById('majoitus').style.display='none';">
+					<img src="images/cross.png" alt="Cross" onclick="closeWindow(document.getElementById('majoitus'));">
 				</div>
 			</div>
 			
@@ -146,8 +152,8 @@
 			</div>
 		</div>
     </div>
-
-	<div class="container" id="yhteys" style="display:none;">		
+ 
+	<div class="container scaling-div" id="yhteys" >		
 		<div class="shadow">
 			<!-- First row with two images -->
 			<div class="row first-row">
@@ -156,7 +162,7 @@
 					<!--<div class="small_button">X</div>
 					<div class="small_button">_</div>-->
 					<img src="images/underscore.png" alt="Underscore">
-					<img src="images/cross.png" alt="Cross" onclick="document.getElementById('yhteys').style.display='none';">
+					<img src="images/cross.png" alt="Cross" onclick="closeWindow(document.getElementById('yhteys'));">
 				</div>
 			</div>
 			
@@ -201,11 +207,11 @@
 						<p>Kartta ja julkinen liikenne</p>
 					</a>-->
 					
-					<div onclick="clickElement(document.getElementById('aikataulu'))">
+					<div id="aikataulu_nappi" onclick="clickElement(this, document.getElementById('aikataulu'))">
 						<img src="images/calendar.png" alt="Image 1">
 						<p>Aikataulu</p>
 					</div>
-					<div onclick="clickElement(document.getElementById('liikenne'))">
+					<div id="liikenne_nappi" onclick="clickElement(this, document.getElementById('liikenne'))">
 						<img src="images/shield.png" alt="Image 1">
 						<p>Kartta ja julkinen liikenne</p>
 					</div>
@@ -216,7 +222,7 @@
 						<p>Kaupunki ja excut</p>
 					</a>-->
 					
-					<div onclick="clickElement(document.getElementById('kaupunki'))">
+					<div id="kaupunki_nappi" onclick="clickElement(this, document.getElementById('kaupunki'))">
 						<img src="images/posankka.png" alt="Image 1">
 						<p>Kaupunki ja excut</p>
 					</div>
@@ -231,12 +237,11 @@
 						<img src="images/phone.png" alt="Image 6">
 						<p>Yhteystiedot</p>
 					</a>-->
-					<div onclick="clickElement(document.getElementById('majoitus'));">
+					<div id="majoitus_nappi" onclick="clickElement(this, document.getElementById('majoitus'));">
 						<img src="images/moon.png" alt="Image 1">
 						<p>Majoitusinfo</p>
 					</div>
-					<div 
-					onclick="clickElement(document.getElementById('yhteys'))">
+					<div id="yhteys_nappi" onclick="clickElement(this, document.getElementById('yhteys'))">
 						<img src="images/phone.png" alt="Image 1">
 						<p>Yhteystiedot</p>
 					</div>
@@ -251,12 +256,19 @@
 	for (var i=0;i<cont.length;i++){	
 		if (window.screen.availWidth > 768 ) {
 			dragElement(cont[i]);
-			registerTouch(cont[i]);
+			registerTouch(cont[i]);			
 		}
 		cont[i].style.top = title.offsetTop+150+"px";
 		cont[i].style.left = title.offsetLeft+"px";		
+		
+		//registerWindowCreator(cont[i],
 	}
 	curZ = cont.length;	
+	console.log(window.screen.availWidth)
+	var napit = ["aikataulu","liikenne","kaupunki","majoitus","yhteys"]
+	if (window.screen.availWidth > 768 ) {
+		napit.forEach(e => registerWindowCreator(document.getElementById(e+"_nappi"), document.getElementById(e),750));
+	}
 	</script>
 </body>
 </html>

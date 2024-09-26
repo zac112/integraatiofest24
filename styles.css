@@ -21,6 +21,8 @@ body {
     padding: 20px;    
     max-width: 100%;
     width: 750px;
+	overflow: hidden;
+
 }
 
 .header-row {
@@ -110,9 +112,39 @@ body {
 	min-width:50px;
 }
 
+/* Image that moves */
+.moving-image {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    animation: move-left-right 5s linear infinite; /* Animation to move image */
+}
+
+
+.scaling-div {
+  position: absolute;
+  height: auto;
+  transform: scaleY(0);
+  transition: transform 1s ease-in;
+}
+
+.scaling-div.open_window {
+	
+	transform: scaleY(1);
+	display: block;
+}
+
 /* Responsive layout for mobile screens */
 @media (max-width: 768px) {
 
+	.scaling-div {
+		display: none;
+		position:static;
+		transform: scaleY(0);
+		width: 400px;
+		transition: none;
+		}
     .container {
         /*max-height: 800px; /* Allows container to grow beyond the viewport if needed */
 		position:static;
@@ -165,15 +197,6 @@ body {
     height: 100px; /* The height of the viewport */
     overflow: hidden;
     position: relative;
-}
-
-/* Image that moves */
-.moving-image {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    animation: move-left-right 5s linear infinite; /* Animation to move image */
 }
 
 /* Animation for the image */

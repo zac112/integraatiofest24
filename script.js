@@ -76,3 +76,24 @@ function registerTouch(elmnt){
 		elmnt.style.zIndex = curZ;
 	}
 }
+
+function registerWindowCreator(elmnt, new_window, width){
+	elmnt.addEventListener("click", function(event) {
+	  
+	  // Get cursor position
+	  const cursorX = event.clientX;
+	  const cursorY = event.clientY;
+
+	  // Set the initial position of the div based on the cursor position
+	  new_window.style.left = `${cursorX-width/2}px`;
+	  new_window.style.top = `${cursorY}px`;
+
+	  // Set the size and opacity to create the scaling effect
+	  setTimeout(() => {
+		new_window.style.width = width+"px";
+		new_window.style.scaleY = "1";
+	  }, 10);
+	  
+	  console.log(elmnt)
+	})
+};
