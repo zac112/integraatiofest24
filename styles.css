@@ -232,3 +232,8 @@ body {
         left: 100%; /* End off-screen on the right */
     }
 }
+
+.imageShadow {
+  -webkit-filter: drop-shadow(12px 12px 7px rgba(0,0,0,0.5));
+  filter: drop-shadow(12px 12px 7px rgba(0,0,0,0.5));
+}
