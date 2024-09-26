@@ -24,38 +24,118 @@
 		<p>Integraatiofest 2024</p>
 	</div>
 	
+	<!-- Aikataulu -->
 	<div class="container scaling-div" id="aikataulu">		
 		<div class="shadow">
 			<!-- First row with two images -->
 			<div class="row first-row">
 				<p class="white_text">FESTIEN AIKATAULUT</p>
 				<div class="small_buttons">
-					<!--<div class="small_button">X</div>
-					<div class="small_button">_</div>-->
 					<img src="images/underscore.png" alt="Underscore">
 					<img src="images/cross.png" alt="Cross" onclick="closeWindow(document.getElementById('aikataulu'));">
 				</div>
 			</div>
 			
-			<!-- Three columns with two images each and text -->
-			<div class="row columns">
-				<div class="column">					
-				</div>			
-				<div class="column center-column">
-					<p>Integraatiofest pidetään 2024 Turussa! Turun yliopisto herää lokakuiseen loistoon usean opiskelijan tullessa kuuntelemaan kiinnostavia esityksiä ja verkostoitumaan. 					
-					</p>
-					
-					<p>
-					Tapahtuma alkaa perjantaina 25.10 ja pois pitäisi lähteä sunnuntaina 27.10. Tarkempi aikataulu esityksineen piakkoin.
-					</p>
-										
+			<div class="row columns">								
+				<div class="row single_column">
+					<div class="row rows">
+						<img id="aikataulu_perjantai_nappi" 
+							src="images/perjantai.png" 
+							onclick="clickElement(this, document.getElementById('aikataulu_perjantai'))"/>
+						<img id="aikataulu_lauantai_nappi" 
+							src="images/lauantai.png" 
+							onclick="clickElement(this, document.getElementById('aikataulu_lauantai'))"/>
+					</div>
+					<img id="aikataulu_sunnuntai_nappi" 
+						src="images/sunnunta.png"
+						onclick="clickElement(this, document.getElementById('aikataulu_sunnuntai'))"/>
 				</div>
-				<div class="column">					
+			</div>
+		</div>
+    </div>
+	
+		<div class="container scaling-div" id="aikataulu_perjantai">		
+		<div class="shadow">
+			<!-- First row with two images -->
+			<div class="row first-row">
+				<p class="white_text">PERJANTAI</p>
+				<div class="small_buttons">
+					<img src="images/underscore.png" alt="Underscore">
+					<img src="images/cross.png" alt="Cross" onclick="closeWindow(document.getElementById('aikataulu_perjantai'));">
+				</div>
+			</div>
+			
+			<div class="row columns" width="500px">								
+				<div class="row single_column">
+					<img src="images/perjantai_straight.png"/>
+					<img src="images/tahdet_glow.png" width="500px"/>
+					<p>10:00 - 12:00	jotainjotain jotainjotain jotainjotain jotainjotain</p>
+					<p>10:00 - 12:00	jotainjotain</p>
+					<p>10:00 - 12:00	jotainjotain</p>
+					<p>10:00 - 12:00	jotainjotain</p>
+					<p>10:00 - 12:00	jotainjotain</p>
+					<p>10:00 - 12:00	jotainjotain</p>
+					<img src="images/tahdet_glow.png" width="500px"/>
+				</div>
+			</div>
+		</div>
+    </div>
+	
+		<div class="container scaling-div" id="aikataulu_lauantai">		
+		<div class="shadow">
+			<!-- First row with two images -->
+			<div class="row first-row">
+				<p class="white_text">LAUANTAI</p>
+				<div class="small_buttons">
+					<img src="images/underscore.png" alt="Underscore">
+					<img src="images/cross.png" alt="Cross" onclick="closeWindow(document.getElementById('aikataulu_lauantai'));">
+				</div>
+			</div>
+			
+			<div class="row columns" width="500px">								
+				<div class="row single_column">
+					<img src="images/lauantai_straight.png"/>
+					<img src="images/tahdet_glow.png" width="500px"/>
+					<p>10:00 - 12:00	jotainjotain jotainjotain jotainjotain jotainjotain</p>
+					<p>10:00 - 12:00	jotainjotain</p>
+					<p>10:00 - 12:00	jotainjotain</p>
+					<p>10:00 - 12:00	jotainjotain</p>
+					<p>10:00 - 12:00	jotainjotain</p>
+					<p>10:00 - 12:00	jotainjotain</p>
+					<img src="images/tahdet_glow.png" width="500px"/>
+				</div>
+			</div>
+		</div>
+    </div>
+	
+		<div class="container scaling-div" id="aikataulu_sunnuntai">		
+		<div class="shadow">
+			<!-- First row with two images -->
+			<div class="row first-row">
+				<p class="white_text">SUNNUNTAI</p>
+				<div class="small_buttons">
+					<img src="images/underscore.png" alt="Underscore">
+					<img src="images/cross.png" alt="Cross" onclick="closeWindow(document.getElementById('aikataulu_sunnuntai'));">
+				</div>
+			</div>
+			
+			<div class="row columns" width="500px">								
+				<div class="row single_column">
+					<img src="images/sunnuntai_straight.png"/>
+					<img src="images/tahdet_glow.png" width="500px"/>
+					<p>10:00 - 12:00	jotainjotain jotainjotain jotainjotain jotainjotain</p>
+					<p>10:00 - 12:00	jotainjotain</p>
+					<p>10:00 - 12:00	jotainjotain</p>
+					<p>10:00 - 12:00	jotainjotain</p>
+					<p>10:00 - 12:00	jotainjotain</p>
+					<p>10:00 - 12:00	jotainjotain</p>
+					<img src="images/tahdet_glow.png" width="500px"/>
 				</div>
 			</div>
 		</div>
     </div>
 
+	<!-- Liikenne -->
 	<div class="container scaling-div" id="liikenne" >		
 		<div class="shadow">
 			<!-- First row with two images -->
@@ -94,6 +174,8 @@
 		</div>
     </div>
 	
+	<!-- Kaupunki -->
+	
 	<div class="container scaling-div" id="kaupunki">		
 		<div class="shadow">
 			<!-- First row with two images -->
@@ -126,6 +208,8 @@
 		</div>
     </div>
 
+	<!-- Majoitus -->
+	
 	<div class="container scaling-div" id="majoitus">		
 		<div class="shadow">
 			<!-- First row with two images -->
@@ -153,6 +237,8 @@
 		</div>
     </div>
  
+	<!-- Yhteys -->
+	
 	<div class="container scaling-div" id="yhteys" >		
 		<div class="shadow">
 			<!-- First row with two images -->
@@ -180,6 +266,7 @@
 		</div>
     </div>
 	
+	<!-- Pää -->
     <div class="container" id="container">
 		
 		<div class="shadow">
@@ -265,9 +352,16 @@
 	}
 	curZ = cont.length;	
 	console.log(window.screen.availWidth)
-	var napit = ["aikataulu","liikenne","kaupunki","majoitus","yhteys"]
+	var napit = [["aikataulu",750],
+	["liikenne",750],
+	["kaupunki",750],
+	["majoitus",750],
+	["yhteys",750], 
+	["aikataulu_perjantai",500],
+	["aikataulu_lauantai",500],
+	["aikataulu_sunnuntai",500]]
 	if (window.screen.availWidth > 768 ) {
-		napit.forEach(e => registerWindowCreator(document.getElementById(e+"_nappi"), document.getElementById(e),750));
+		napit.forEach(([e,w]) => registerWindowCreator(document.getElementById(e+"_nappi"), document.getElementById(e),w));
 	}
 	</script>
 </body>
