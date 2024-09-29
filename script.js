@@ -94,6 +94,5 @@ function registerWindowCreator(elmnt, new_window, width){
 		new_window.style.scaleY = "1";
 	  }, 10);
 	  
-	  console.log(elmnt)
 	})
 };
