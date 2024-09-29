@@ -4,7 +4,9 @@ body, html {
     padding: 0;
     font-family: Arial, sans-serif;
 }
-
+table {
+	border-spacing:0px;
+}
 body {
     background: url('images/background.png') no-repeat center center fixed;
     background-size: cover;
@@ -65,7 +67,7 @@ body {
     border-right: #ccc 5px solid;
     border-bottom: #777 5px solid;
     border-left: #777 5px solid;
-	background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */	
+	background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */	
 
 }
 
@@ -150,6 +152,26 @@ body {
 	
 	transform: scaleY(1);
 	display: block;
+}
+table{
+	max-width:90%;
+}
+tr{
+	padding: 10px;
+	transition: background-color 1s ease-out;
+}
+tr:nth-child(odd){
+	background-color: rgba(200,200,200,0.2);
+}
+
+tr:nth-child(even){
+	background-color: rgba(200,200,200,0);
+}
+tr:hover {background-color: rgba(160,32,240,0.3);}
+
+.aikatauluVsolu{
+	width: 100px;
+	padding-left: 20px;
 }
 
 /* Responsive layout for mobile screens */

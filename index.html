@@ -10,6 +10,11 @@
 	function closeWindow(el){
 		el.classList.toggle('open_window');
 	}
+
+	function minimizeWindow(el){
+		let cont = el.children[0].children[1];
+		cont.style.display = (cont.style.display=="none" ? "block":"none");
+	}
 	
 	function clickElement(el, elmnt, win){
 		//elmnt.style.display='block';
@@ -27,12 +32,14 @@
 	<!-- Aikataulu -->
 	<div class="container scaling-div" id="aikataulu">		
 		<div class="shadow">
-			<!-- First row with two images -->
+		
 			<div class="row first-row">
 				<p class="white_text">FESTIEN AIKATAULUT</p>
 				<div class="small_buttons">
-					<img src="images/underscore.png" alt="Underscore">
-					<img src="images/cross.png" alt="Cross" onclick="closeWindow(document.getElementById('aikataulu'));">
+					<img src="images/underscore.png" alt="Underscore"
+					onclick="minimizeWindow(document.getElementById('aikataulu'));">
+					<img src="images/cross.png" alt="Cross" 
+					onclick="closeWindow(document.getElementById('aikataulu'));">
 				</div>
 			</div>
 			
@@ -60,12 +67,14 @@
 	
 		<div class="container scaling-div" id="aikataulu_perjantai">		
 		<div class="shadow">
-			<!-- First row with two images -->
+
 			<div class="row first-row">
 				<p class="white_text">PERJANTAI</p>
 				<div class="small_buttons">
-					<img src="images/underscore.png" alt="Underscore">
-					<img src="images/cross.png" alt="Cross" onclick="closeWindow(document.getElementById('aikataulu_perjantai'));">
+					<img src="images/underscore.png" alt="Underscore"
+					onclick="minimizeWindow(document.getElementById('aikataulu_perjantai'));">
+					<img src="images/cross.png" alt="Cross" 
+					onclick="closeWindow(document.getElementById('aikataulu_perjantai'));">
 				</div>
 			</div>
 			
@@ -73,12 +82,32 @@
 				<div class="row single_column">
 					<img src="images/perjantai_straight.png"/>
 					<img src="images/tahdet_glow.png" width="500px" class="imageShadow"/>
-					<p>10:00 - 12:00	jotainjotain jotainjotain jotainjotain jotainjotain</p>
-					<p>10:00 - 12:00	jotainjotain</p>
-					<p>10:00 - 12:00	jotainjotain</p>
-					<p>10:00 - 12:00	jotainjotain</p>
-					<p>10:00 - 12:00	jotainjotain</p>
-					<p>10:00 - 12:00	jotainjotain</p>
+					<table>
+					<tr class="aikatauluTauluEkaRivi">
+						<td class="aikatauluVsolu">10:00 - 12:00</td>
+						<td>jotainjotain jotainjotain jotainjotain jotainjotain</td>
+					</tr>
+					<tr class="aikatauluTauluTokaRivi">
+						<td class="aikatauluVsolu">10:00 - 12:00</td>
+						<td>jotainjotain jotainjotain jotainjotain jotainjotainjotainjotain jotainjotain jotainjotain jotainjotain</td>
+					</tr>
+					<tr>
+						<td class="aikatauluVsolu">10:00 - 12:00</td>
+						<td>jotainjotain</td>
+					</tr>
+					<tr>
+						<td class="aikatauluVsolu">10:00 - 12:00</td>
+						<td>jotainjotain</td>
+					</tr>
+					<tr>
+						<td class="aikatauluVsolu">10:00 - 12:00</td>
+						<td>jotainjotain</td>
+					</tr>
+					<tr>
+						<td class="aikatauluVsolu">10:00 - 12:00</td>
+						<td>jotainjotain</td>
+					</tr>
+					</table>
 					<img src="images/tahdet_glow.png" width="500px" class="imageShadow"/>
 				</div>
 			</div>
@@ -87,11 +116,12 @@
 	
 		<div class="container scaling-div" id="aikataulu_lauantai">		
 		<div class="shadow">
-			<!-- First row with two images -->
+
 			<div class="row first-row">
 				<p class="white_text">LAUANTAI</p>
 				<div class="small_buttons">
-					<img src="images/underscore.png" alt="Underscore">
+					<img src="images/underscore.png" alt="Underscore"
+					onclick="minimizeWindow(document.getElementById('aikataulu_lauantai'));">
 					<img src="images/cross.png" alt="Cross" onclick="closeWindow(document.getElementById('aikataulu_lauantai'));">
 				</div>
 			</div>
@@ -100,12 +130,32 @@
 				<div class="row single_column">
 					<img src="images/lauantai_straight.png"/>
 					<img src="images/tahdet_glow.png" width="500px" class="imageShadow"/>
-					<p>10:00 - 12:00	jotainjotain jotainjotain jotainjotain jotainjotain</p>
-					<p>10:00 - 12:00	jotainjotain</p>
-					<p>10:00 - 12:00	jotainjotain</p>
-					<p>10:00 - 12:00	jotainjotain</p>
-					<p>10:00 - 12:00	jotainjotain</p>
-					<p>10:00 - 12:00	jotainjotain</p>
+					<table>
+					<tr class="aikatauluTauluEkaRivi">
+						<td class="aikatauluVsolu">10:00 - 12:00</td>
+						<td>jotainjotain jotainjotain jotainjotain jotainjotain</td>
+					</tr>
+					<tr class="aikatauluTauluTokaRivi">
+						<td class="aikatauluVsolu">10:00 - 12:00</td>
+						<td>jotainjotain jotainjotain jotainjotain jotainjotainjotainjotain jotainjotain jotainjotain jotainjotain</td>
+					</tr>
+					<tr>
+						<td class="aikatauluVsolu">10:00 - 12:00</td>
+						<td>jotainjotain</td>
+					</tr>
+					<tr>
+						<td class="aikatauluVsolu">10:00 - 12:00</td>
+						<td>jotainjotain</td>
+					</tr>
+					<tr>
+						<td class="aikatauluVsolu">10:00 - 12:00</td>
+						<td>jotainjotain</td>
+					</tr>
+					<tr>
+						<td class="aikatauluVsolu">10:00 - 12:00</td>
+						<td>jotainjotain</td>
+					</tr>
+					</table>
 					<img src="images/tahdet_glow.png" width="500px" class="imageShadow"/>
 				</div>
 			</div>
@@ -114,11 +164,12 @@
 	
 		<div class="container scaling-div" id="aikataulu_sunnuntai">		
 		<div class="shadow">
-			<!-- First row with two images -->
+
 			<div class="row first-row">
 				<p class="white_text">SUNNUNTAI</p>
 				<div class="small_buttons">
-					<img src="images/underscore.png" alt="Underscore">
+					<img src="images/underscore.png" alt="Underscore"
+					onclick="minimizeWindow(document.getElementById('aikataulu_sunnuntai'));">
 					<img src="images/cross.png" alt="Cross" onclick="closeWindow(document.getElementById('aikataulu_sunnuntai'));">
 				</div>
 			</div>
@@ -127,12 +178,32 @@
 				<div class="row single_column">
 					<img src="images/sunnuntai_straight.png"/>
 					<img src="images/tahdet_glow.png" width="500px" class="imageShadow"/>
-					<p>10:00 - 12:00	jotainjotain jotainjotain jotainjotain jotainjotain</p>
-					<p>10:00 - 12:00	jotainjotain</p>
-					<p>10:00 - 12:00	jotainjotain</p>
-					<p>10:00 - 12:00	jotainjotain</p>
-					<p>10:00 - 12:00	jotainjotain</p>
-					<p>10:00 - 12:00	jotainjotain</p>
+					<table>
+					<tr class="aikatauluTauluEkaRivi">
+						<td class="aikatauluVsolu">10:00 - 12:00</td>
+						<td>jotainjotain jotainjotain jotainjotain jotainjotain</td>
+					</tr>
+					<tr class="aikatauluTauluTokaRivi">
+						<td class="aikatauluVsolu">10:00 - 12:00</td>
+						<td>jotainjotain jotainjotain jotainjotain jotainjotainjotainjotain jotainjotain jotainjotain jotainjotain</td>
+					</tr>
+					<tr>
+						<td class="aikatauluVsolu">10:00 - 12:00</td>
+						<td>jotainjotain</td>
+					</tr>
+					<tr>
+						<td class="aikatauluVsolu">10:00 - 12:00</td>
+						<td>jotainjotain</td>
+					</tr>
+					<tr>
+						<td class="aikatauluVsolu">10:00 - 12:00</td>
+						<td>jotainjotain</td>
+					</tr>
+					<tr>
+						<td class="aikatauluVsolu">10:00 - 12:00</td>
+						<td>jotainjotain</td>
+					</tr>
+					</table>
 					<img src="images/tahdet_glow.png" width="500px" class="imageShadow"/>
 				</div>
 			</div>
@@ -142,18 +213,17 @@
 	<!-- Liikenne -->
 	<div class="container scaling-div" id="liikenne" >		
 		<div class="shadow">
-			<!-- First row with two images -->
+
 			<div class="row first-row">
 				<p class="white_text">LIIKENTEEN HOITAA FÖLI</p>
 				<div class="small_buttons">
-					<!--<div class="small_button">X</div>
-					<div class="small_button">_</div>-->
-					<img src="images/underscore.png" alt="Underscore">
+
+					<img src="images/underscore.png" alt="Underscore"
+					onclick="minimizeWindow(document.getElementById('liikenne'));">
 					<img src="images/cross.png" alt="Cross" onclick="closeWindow(document.getElementById('liikenne'));">
 				</div>
 			</div>
 			
-			<!-- Three columns with two images each and text -->
 			<div class="row columns">
 				<div class="column">	
 					<div class="viewport">
@@ -182,18 +252,16 @@
 	
 	<div class="container scaling-div" id="kaupunki">		
 		<div class="shadow">
-			<!-- First row with two images -->
+
 			<div class="row first-row">
 				<p class="white_text">KAUPUNKI (TURKU)</p>
 				<div class="small_buttons">
-					<!--<div class="small_button">X</div>
-					<div class="small_button">_</div>-->
-					<img src="images/underscore.png" alt="Underscore">
+					<img src="images/underscore.png" alt="Underscore"
+					onclick="minimizeWindow(document.getElementById('kaupunki'));">
 					<img src="images/cross.png" alt="Cross" onclick="closeWindow(document.getElementById('kaupunki'))">
 				</div>
 			</div>
 			
-			<!-- Three columns with two images each and text -->
 			<div class="row columns">
 				<div class="column">					
 				</div>			
@@ -216,18 +284,15 @@
 	
 	<div class="container scaling-div" id="majoitus">		
 		<div class="shadow">
-			<!-- First row with two images -->
 			<div class="row first-row">
 				<p class="white_text">MAJOITUSJUTTUJA</p>
 				<div class="small_buttons">
-					<!--<div class="small_button">X</div>
-					<div class="small_button">_</div>-->
-					<img src="images/underscore.png" alt="Underscore">
+					<img src="images/underscore.png" alt="Underscore"
+					onclick="minimizeWindow(document.getElementById('majoitus'));">
 					<img src="images/cross.png" alt="Cross" onclick="closeWindow(document.getElementById('majoitus'));">
 				</div>
 			</div>
 			
-			<!-- Three columns with two images each and text -->
 			<div class="row columns">
 				<div class="column">					
 				</div>			
@@ -245,18 +310,16 @@
 	
 	<div class="container scaling-div" id="yhteys" >		
 		<div class="shadow">
-			<!-- First row with two images -->
+
 			<div class="row first-row">
 				<p class="white_text">YHTEYSTIEDOT</p>
 				<div class="small_buttons">
-					<!--<div class="small_button">X</div>
-					<div class="small_button">_</div>-->
-					<img src="images/underscore.png" alt="Underscore">
+					<img src="images/underscore.png" alt="Underscore"
+					onclick="minimizeWindow(document.getElementById('yhteys'));">
 					<img src="images/cross.png" alt="Cross" onclick="closeWindow(document.getElementById('yhteys'));">
 				</div>
 			</div>
 			
-			<!-- Three columns with two images each and text -->
 			<div class="row columns">
 				<div class="column">					
 				</div>			
@@ -274,30 +337,19 @@
     <div class="container" id="container">
 		
 		<div class="shadow">
-			<!-- First row with two images -->
+
 			<div class="row first-row">
 				<p class="white_text">EHDOTTOMASTI YHDET FESTEISTÄ - ABSOLUT EN AV FESTERNA!</p>
 				<div class="small_buttons">
-					<!--<div class="small_button">X</div>
-					<div class="small_button">_</div>-->
-					<img src="images/underscore.png" alt="Underscore">
-					<img src="images/cross.png" alt="Cross">
+					<img src="images/underscore.png" alt="Underscore"
+					onclick="minimizeWindow(document.getElementById('container'));">
+					<img src="images/cross.png" alt="Cross" 
+					onclick="if (confirm('Haluatko varmasti sulkea ikkunan? Et voi käyttää sivua jos suljet pääikkunan.')) document.getElementById('container').style.display='none';">
 				</div>
 			</div>
 			
-			<!-- Three columns with two images each and text -->
 			<div class="row columns">
 				<div class="column">
-					<!--<a class="no_link" href="./aikataulu.html">
-						<img src="images/calendar.png" alt="Image 1">
-						<p>Aikataulu</p>
-					</a>
-					
-					<a href="./liikenne.html" class="no_link">
-						<img src="images/shield.png" alt="Image 2">
-						<p>Kartta ja julkinen liikenne</p>
-					</a>-->
-					
 					<div id="aikataulu_nappi" onclick="clickElement(this, document.getElementById('aikataulu'))">
 						<img src="images/calendar.png" alt="Image 1">
 						<p>Aikataulu</p>
@@ -308,10 +360,6 @@
 					</div>
 				</div>			
 				<div class="column center-column">
-					<!--<a href="/" class="no_link">
-						<img src="images/posankka.png" alt="Image 3">
-						<p>Kaupunki ja excut</p>
-					</a>-->
 					
 					<div id="kaupunki_nappi" onclick="clickElement(this, document.getElementById('kaupunki'))">
 						<img src="images/posankka.png" alt="Image 1">
@@ -320,14 +368,6 @@
 					
 				</div>
 				<div class="column">
-					<!--<a href="/" class="no_link">
-						<img src="images/moon.png" alt="Image 5">
-						<p>Majoitusinfo</p>
-					</a>
-					<a href="/" class="no_link">
-						<img src="images/phone.png" alt="Image 6">
-						<p>Yhteystiedot</p>
-					</a>-->
 					<div id="majoitus_nappi" onclick="clickElement(this, document.getElementById('majoitus'));">
 						<img src="images/moon.png" alt="Image 1">
 						<p>Majoitusinfo</p>
@@ -351,11 +391,9 @@
 		}
 		cont[i].style.top = title.offsetTop+150+"px";
 		cont[i].style.left = title.offsetLeft+"px";		
-		
-		//registerWindowCreator(cont[i],
 	}
 	curZ = cont.length;	
-	console.log(window.screen.availWidth)
+	
 	var napit = [["aikataulu",750],
 	["liikenne",750],
 	["kaupunki",750],
