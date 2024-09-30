@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexbox Layout</title>
+    <title>Integraatiofest 2024</title>
     <link rel="stylesheet" href="styles.css">
 	<script src="script.js"></script>
 	<script>
+	var byId = (e)=>document.getElementById(e);
+	
 	screen.orientation.lock("portrait").catch(()=>console.log("Not possible to lock orientation"));
 	
-	function closeWindow(el){
-		el.classList.toggle('open_window');
+	function closeWindowById(el){
+		document.getElementById(el).classList.toggle('open_window');
 	}
 
-	function minimizeWindow(el){
-		let cont = el.children[0].children[1];
-		cont.style.display = (cont.style.display=="none" ? "block":"none");
+	function minimizeWindowById(el){
+		let cont = document.getElementById(el).children[0].children[1];
+		cont.style.display = (cont.style.display=="none" ? 'flex':"none");
 	}
 	
 	function clickElement(el, elmnt, win){
@@ -39,9 +41,9 @@
 				<p class="white_text">FESTIEN AIKATAULUT</p>
 				<div class="small_buttons">
 					<img src="images/underscore.png" alt="Underscore"
-					onclick="minimizeWindow(document.getElementById('aikataulu'));">
+					onclick="minimizeWindowById('aikataulu');">
 					<img src="images/cross.png" alt="Cross" 
-					onclick="closeWindow(document.getElementById('aikataulu'));">
+					onclick="closeWindowById('aikataulu');">
 				</div>
 			</div>
 			
@@ -50,17 +52,17 @@
 					<div class="row rows">
 						<img id="aikataulu_perjantai_nappi" 
 							src="images/perjantai.png" 
-							onclick="clickElement(this, document.getElementById('aikataulu_perjantai'))"
+							onclick="clickElement(this, byId('aikataulu_perjantai'))"
 							class="imageShadow"/>
 							
 						<img id="aikataulu_lauantai_nappi" 
 							src="images/lauantai.png" 
-							onclick="clickElement(this, document.getElementById('aikataulu_lauantai'))"
+							onclick="clickElement(this, byId('aikataulu_lauantai'))"
 							class="imageShadow"/>
 					</div>
 					<img id="aikataulu_sunnuntai_nappi" 
 						src="images/sunnunta.png"
-						onclick="clickElement(this, document.getElementById('aikataulu_sunnuntai'))"
+						onclick="clickElement(this, byId('aikataulu_sunnuntai'))"
 						class="imageShadow"/>
 				</div>
 			</div>
@@ -74,9 +76,9 @@
 				<p class="white_text">PERJANTAI</p>
 				<div class="small_buttons">
 					<img src="images/underscore.png" alt="Underscore"
-					onclick="minimizeWindow(document.getElementById('aikataulu_perjantai'));">
+					onclick="minimizeWindowById('aikataulu_perjantai');">
 					<img src="images/cross.png" alt="Cross" 
-					onclick="closeWindow(document.getElementById('aikataulu_perjantai'));">
+					onclick="closeWindowById('aikataulu_perjantai')">
 				</div>
 			</div>
 			
@@ -122,9 +124,10 @@
 			<div class="row first-row">
 				<p class="white_text">LAUANTAI</p>
 				<div class="small_buttons">
-					<img src="images/underscore.png" alt="Underscore"
-					onclick="minimizeWindow(document.getElementById('aikataulu_lauantai'));">
-					<img src="images/cross.png" alt="Cross" onclick="closeWindow(document.getElementById('aikataulu_lauantai'));">
+					<img src="images/underscore.png" alt="Underscore" 
+					onclick="minimizeWindowById('aikataulu_lauantai');">
+					<img src="images/cross.png" alt="Cross" 
+					onclick="closeWindowById('aikataulu_lauantai')">
 				</div>
 			</div>
 			
@@ -171,8 +174,9 @@
 				<p class="white_text">SUNNUNTAI</p>
 				<div class="small_buttons">
 					<img src="images/underscore.png" alt="Underscore"
-					onclick="minimizeWindow(document.getElementById('aikataulu_sunnuntai'));">
-					<img src="images/cross.png" alt="Cross" onclick="closeWindow(document.getElementById('aikataulu_sunnuntai'));">
+					onclick="minimizeWindowById('aikataulu_sunnuntai');">
+					<img src="images/cross.png" alt="Cross" 
+					onclick="closeWindowById('aikataulu_sunnuntai')">
 				</div>
 			</div>
 			
@@ -220,9 +224,10 @@
 				<p class="white_text">LIIKENTEEN HOITAA FÖLI</p>
 				<div class="small_buttons">
 
-					<img src="images/underscore.png" alt="Underscore"
-					onclick="minimizeWindow(document.getElementById('liikenne'));">
-					<img src="images/cross.png" alt="Cross" onclick="closeWindow(document.getElementById('liikenne'));">
+					<img src="images/underscore.png" alt="Underscore" 
+					onclick="minimizeWindowById('liikenne');">
+					<img src="images/cross.png" alt="Cross" 
+					onclick="closeWindowById('liikenne')">
 				</div>
 			</div>
 			
@@ -259,8 +264,9 @@
 				<p class="white_text">KAUPUNKI (TURKU)</p>
 				<div class="small_buttons">
 					<img src="images/underscore.png" alt="Underscore"
-					onclick="minimizeWindow(document.getElementById('kaupunki'));">
-					<img src="images/cross.png" alt="Cross" onclick="closeWindow(document.getElementById('kaupunki'))">
+					onclick="minimizeWindowById('kaupunki');">
+					<img src="images/cross.png" alt="Cross" 
+					onclick="closeWindowById('kaupunki')">
 				</div>
 			</div>
 			
@@ -289,9 +295,10 @@
 			<div class="row first-row">
 				<p class="white_text">MAJOITUSJUTTUJA</p>
 				<div class="small_buttons">
-					<img src="images/underscore.png" alt="Underscore"
-					onclick="minimizeWindow(document.getElementById('majoitus'));">
-					<img src="images/cross.png" alt="Cross" onclick="closeWindow(document.getElementById('majoitus'));">
+					<img src="images/underscore.png" alt="Underscore" 
+					onclick="minimizeWindowById('majoitus');">
+					<img src="images/cross.png" alt="Cross" 
+					onclick="closeWindowById('majoitus')">
 				</div>
 			</div>
 			
@@ -316,9 +323,10 @@
 			<div class="row first-row">
 				<p class="white_text">YHTEYSTIEDOT</p>
 				<div class="small_buttons">
-					<img src="images/underscore.png" alt="Underscore"
-					onclick="minimizeWindow(document.getElementById('yhteys'));">
-					<img src="images/cross.png" alt="Cross" onclick="closeWindow(document.getElementById('yhteys'));">
+					<img src="images/underscore.png" alt="Underscore" 
+					onclick="minimizeWindowById('yhteys');">
+					<img src="images/cross.png" alt="Cross" 
+					onclick="closeWindowById('yhteys')">
 				</div>
 			</div>
 			
@@ -344,37 +352,37 @@
 				<p class="white_text">EHDOTTOMASTI YHDET FESTEISTÄ - ABSOLUT EN AV FESTERNA!</p>
 				<div class="small_buttons">
 					<img src="images/underscore.png" alt="Underscore"
-					onclick="minimizeWindow(document.getElementById('container'));">
+					onclick="minimizeWindowById('container');">
 					<img src="images/cross.png" alt="Cross" 
-					onclick="if (confirm('Haluatko varmasti sulkea ikkunan? Et voi käyttää sivua jos suljet pääikkunan.')) document.getElementById('container').style.display='none';">
+					onclick="if (confirm('Haluatko varmasti sulkea ikkunan? Et voi käyttää sivua jos suljet pääikkunan.')) byId('container').style.display='none';">
 				</div>
 			</div>
 			
 			<div class="row columns">
 				<div class="column">
-					<div id="aikataulu_nappi" onclick="clickElement(this, document.getElementById('aikataulu'))">
+					<div id="aikataulu_nappi" onclick="clickElement(this, byId('aikataulu'))">
 						<img src="images/calendar.png" alt="Image 1">
 						<p>Aikataulu</p>
 					</div>
-					<div id="liikenne_nappi" onclick="clickElement(this, document.getElementById('liikenne'))">
+					<div id="liikenne_nappi" onclick="clickElement(this, byId('liikenne'))">
 						<img src="images/shield.png" alt="Image 1">
 						<p>Kartta ja julkinen liikenne</p>
 					</div>
 				</div>			
 				<div class="column center-column">
 					
-					<div id="kaupunki_nappi" onclick="clickElement(this, document.getElementById('kaupunki'))">
+					<div id="kaupunki_nappi" onclick="clickElement(this, byId('kaupunki'))">
 						<img src="images/posankka.png" alt="Image 1">
 						<p>Kaupunki ja excut</p>
 					</div>
 					
 				</div>
 				<div class="column">
-					<div id="majoitus_nappi" onclick="clickElement(this, document.getElementById('majoitus'));">
+					<div id="majoitus_nappi" onclick="clickElement(this, byId('majoitus'));">
 						<img src="images/moon.png" alt="Image 1">
 						<p>Majoitusinfo</p>
 					</div>
-					<div id="yhteys_nappi" onclick="clickElement(this, document.getElementById('yhteys'))">
+					<div id="yhteys_nappi" onclick="clickElement(this, byId('yhteys'))">
 						<img src="images/phone.png" alt="Image 1">
 						<p>Yhteystiedot</p>
 					</div>
@@ -405,7 +413,7 @@
 	["aikataulu_lauantai",500],
 	["aikataulu_sunnuntai",500]]
 	if (window.screen.availWidth > 768 ) {
-		napit.forEach(([e,w]) => registerWindowCreator(document.getElementById(e+"_nappi"), document.getElementById(e),w));
+		napit.forEach(([e,w]) => registerWindowCreator(byId(e+"_nappi"), byId(e), w));
 	}
 	</script>
 </body>
