@@ -177,6 +177,16 @@ tr:hover {background-color: rgba(160,32,240,0.3);}
 	padding-top: 0px;
 }
 
+.sponsorit_top{
+	display:block;
+	position: sticky;
+	top: 0px;
+	width:500px;
+}	
+.sponsorit_bottom{
+	display:none;
+}	
+
 /* Responsive layout for mobile screens */
 @media (max-width: 768px) {
 
@@ -221,7 +231,13 @@ tr:hover {background-color: rgba(160,32,240,0.3);}
 		height: auto;
 		max-width: 200px;
 		margin-bottom: 10px;
-}
+	}
+.sponsorit_bottom{
+	
+	position: sticky;
+	bottom: 0px;
+	width:500px;
+}	
 }
 
 @media (max-width: 415px) {
@@ -241,6 +257,7 @@ tr:hover {background-color: rgba(160,32,240,0.3);}
         height: 40px;
 		padding: 5px;
     }
+	
 }
 
 /*Liikenne*/
