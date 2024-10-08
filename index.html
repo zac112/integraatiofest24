@@ -48,7 +48,7 @@
 					byId('sponssit').style.display='none';
 					setTimeout(()=>{						
 						byId('sponssit').style.display='block';
-						console.log(byId('sponssit'));
+						alert('Hups, taisit vahingossa sulkea sponssi-ikkunamme!');
 						},100);						
 					">
 				</div>
@@ -66,7 +66,7 @@
     </div>
 	
 	<!-- Sponssit small screen-->
-	<div class="small_sponssi" id="sponssit" >
+	<div class="small_sponssi" id="sponssit_all" >
 		
 		<div class="shadow" >
 
@@ -75,13 +75,13 @@
 				<div class="small_buttons">
 					<a href="./index_en.html"><img src="images/EN.png" alt="Finnish"/></a>
 					<img src="images/underscore.png" alt="Underscore"
-					onclick="minimizeWindowById('sponssit');">
+					onclick="minimizeWindowById('sponssit_all');">
 					<img src="images/cross.png" alt="Cross" 
 					onclick="
-					byId('sponssit').style.display='none';
+					byId('sponssit_all').style.display='none';
 					setTimeout(()=>{						
-						byId('sponssit').style.display='block';
-						console.log(byId('sponssit'));
+						byId('sponssit_all').style.display='block';
+						alert('Hups, taisit vahingossa sulkea sponssi-ikkunamme!');
 						},100);						
 					">
 				</div>
@@ -552,7 +552,7 @@
 					byId('sponssit_right').style.display='none';
 					setTimeout(()=>{						
 						byId('sponssit_right').style.display='block';
-						console.log(byId('sponssit_right'));
+						alert('Hups, taisit vahingossa sulkea sponssi-ikkunamme!');
 						},100);						
 					">
 				</div>
