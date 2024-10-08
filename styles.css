@@ -219,8 +219,15 @@ tr:hover {background-color: rgba(160,32,240,0.3);}
 	display:none;
 }
 
+.videocontainer{
+	width:750px;
+}
 /* Responsive layout for mobile screens */
 @media (max-width: 768px) {
+
+	.videocontainer{
+		width:400px;
+	}
 
 	.sponsorit_top{
 		display:block;
@@ -309,6 +316,10 @@ tr:hover {background-color: rgba(160,32,240,0.3);}
 }
 
 @media (max-width: 415px) {
+	.videocontainer{
+		width:350px;
+	}
+
 	.sponsorit_top{
 		display:block;
 		position: static;
