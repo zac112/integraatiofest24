@@ -59,6 +59,17 @@ body {
 .shadow {
 	box-shadow: 5px 10px;
 }
+
+.sponssi-columns{
+	display: flex;
+	flex-direction:row;
+    justify-content: space-between;
+	border-top: #ccc 5px solid;
+    border-right: #ccc 5px solid;
+    border-bottom: #777 5px solid;
+    border-left: #777 5px solid;
+	background-color: rgba(255, 255, 255, 0.9);
+}
 /* Three column layout */
 .columns {
     display: flex;
@@ -128,7 +139,7 @@ body {
 .small_buttons {
 	justify-content:flex-end;
 	flex-direction:row;
-	min-width:50px;
+	min-width:70px;
 }
 
 /* Image that moves */
