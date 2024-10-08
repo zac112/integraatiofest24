@@ -158,6 +158,9 @@ body {
   height: auto;
   transform: scaleY(0);
   transition: transform 1s ease-in;
+  -webkit-transition: transform 1s ease-in;
+  -moz-transition: transform 1s ease-in;
+  -o-transition: transform 1s ease-in;
 }
 
 .scaling-div.open_window {
@@ -171,6 +174,9 @@ table{
 tr{
 	padding: 10px;
 	transition: background-color 1s ease-out;
+	-webkit-transition: background-color 1s ease-out;
+    -moz-transition: background-color 1s ease-out;
+    -o-transition: background-color 1s ease-out;
 }
 tr:nth-child(odd){
 	background-color: rgba(200,200,200,0.2);
@@ -229,6 +235,9 @@ tr:hover {background-color: rgba(160,32,240,0.3);}
 		transform: scaleY(0);
 		width: 400px;
 		transition: none;
+		-webkit-transition: none;
+		-moz-transition: none;
+		-o-transition: none;
 		}
     .container {
         /*max-height: 800px; /* Allows container to grow beyond the viewport if needed */
