@@ -220,13 +220,23 @@ tr:hover {background-color: rgba(160,32,240,0.3);}
 }
 
 .videocontainer{
+	
+	height:493px;
+}
+.videoframe{
 	width:750px;
+	height:580px;	
 }
 /* Responsive layout for mobile screens */
 @media (max-width: 768px) {
 
 	.videocontainer{
+		height:243px;
+	}
+	.videoframe{
 		width:400px;
+		height:310px;	
+		
 	}
 
 	.sponsorit_top{
