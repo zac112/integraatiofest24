@@ -233,13 +233,23 @@ tr{
 }
 
 .videocontainer{
+	overflow:hidden;
+	height:493px;
+}
+.videoframe{
 	width:750px;
+	height:580px;	
 }
 /* Responsive layout for mobile screens */
 @media (max-width: 768px) {
 
 	.videocontainer{
+		height:243px;
+	}
+	.videoframe{
 		width:400px;
+		height:310px;	
+		
 	}
 
 	.sponsorit_top{
