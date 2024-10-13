@@ -314,6 +314,7 @@ tr{
 		border-bottom: #777 5px solid;
 		border-left: #777 5px solid;
 		background-color: rgba(255, 255, 255, 0.9);
+		width:450px;
 	}
 	
 	.left{
@@ -339,9 +340,22 @@ tr{
 }
 
 @media (max-width: 415px) {
+	.sponssi-columns{
+		display: flex;
+		flex-direction:column;
+		justify-content: space-between;
+		border-top: #ccc 5px solid;
+		border-right: #ccc 5px solid;
+		border-bottom: #777 5px solid;
+		border-left: #777 5px solid;
+		background-color: rgba(255, 255, 255, 0.9);
+		width:350px;
+	}
+	
 	.sponssi-columns tr {
 		height:90px;
 	}
+
 	.sponssi-columns img{
 		width:75px;
 		max-height:150px;
