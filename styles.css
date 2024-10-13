@@ -64,13 +64,21 @@ body {
 	display: flex;
 	flex-direction:column;
     justify-content: space-between;
+	align-items:center;
 	border-top: #ccc 5px solid;
     border-right: #ccc 5px solid;
     border-bottom: #777 5px solid;
     border-left: #777 5px solid;
 	background-color: rgba(255, 255, 255, 0.9);
+	width:250px;
 }
 
+.sponssi-columns img{
+	width:150px;
+	max-height:150px;
+	margin:auto;
+}
+	
 /* Three column layout */
 .columns {
     display: flex;
@@ -178,14 +186,18 @@ tr{
     -moz-transition: background-color 1s ease-out;
     -o-transition: background-color 1s ease-out;
 }
-tr:nth-child(odd){
+
+.sponssi-columns tr {
+	height:150px;
+}
+.single_column tr:nth-child(odd){
 	background-color: rgba(200,200,200,0.2);
 }
 
-tr:nth-child(even){
+.single_column tr:nth-child(even){
 	background-color: rgba(200,200,200,0);
 }
-tr:hover {background-color: rgba(160,32,240,0.3);}
+.single_column tr:hover {background-color: rgba(160,32,240,0.3);}
 
 .aikatauluVsolu{
 	width: 100px;
@@ -200,6 +212,7 @@ tr:hover {background-color: rgba(160,32,240,0.3);}
 	float:left;
 	left:0px;
 	top:10%;
+	height:90%;
 }
 .right{
 	position:fixed;
@@ -304,18 +317,26 @@ tr:hover {background-color: rgba(160,32,240,0.3);}
 		position:static;
 	}
 
-.sponsorit_bottom{
-	
-	position: sticky;
-	bottom: 0px;
-	width:500px;
-}	
+	.sponsorit_bottom{
+		
+		position: sticky;
+		bottom: 0px;
+		width:500px;
+	}	
 	.sponssi-columns img{
 		width: 100px;
 	}
 }
 
 @media (max-width: 415px) {
+	.sponssi-columns tr {
+		height:90px;
+	}
+	.sponssi-columns img{
+		width:75px;
+		max-height:150px;
+		margin:auto;
+	}
 	.videocontainer{
 		width:350px;
 	}
