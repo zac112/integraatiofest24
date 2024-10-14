@@ -25,17 +25,19 @@
 		elmnt.style.zIndex=curZ+1;
 		elmnt.scrollIntoView()		
 	}
-	function spawnBus(){
+	function spawnBus(el, event){	
 		let bus = document.createElement('img');
+		let speed = 3+Math.random()*3;
 		bus.src="images/bus.png";
 		bus.classList.add("moving-image");
-		bus.style.top = (Math.random()*100)+"%";
-		console.log(bus);
+		bus.style.top = (Math.random()*document.body.scrollHeight)+"px";
+		bus.style.animation = "move-left-right "+speed+"s linear 0s infinite normal forwards running" 
+		
 		document.body.appendChild(bus);
 	}
 	</script>
 </head>
-<body style="overflow:hidden;">
+<body style="overflow-x:hidden;">
 	<div class="header-row" >	
 		<p>Integraatiofest 2024</p>
 	</div>
@@ -363,7 +365,7 @@
 			<div class="row columns">
 				<div class="column">	
 					<div class="viewport">
-					<img src="images/bus.png" alt="Moving Image" class="moving-image" style="animation-delay:2.5s;left:-100%" onclick="spawnBus();">
+					<img src="images/bus.png" alt="Moving Image" class="moving-image" style="animation-delay:2.5s;left:-100%" onclick="spawnBus(this, event);">
 					</div>				
 				</div>			
 				<div class="column center-column">
