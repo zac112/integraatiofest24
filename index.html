@@ -21,7 +21,6 @@
 	}
 	
 	function clickElement(el, elmnt, win){
-		//elmnt.style.display='block';
 		elmnt.classList.toggle('open_window');
 		elmnt.style.zIndex=curZ+1;
 		elmnt.scrollIntoView()		
@@ -336,12 +335,13 @@
 			</div>
 		</div>
     </div>
+	
 	<!-- Liikenne -->
 	<div class="container scaling-div" id="liikenne" >		
 		<div class="shadow">
 
 			<div class="row first-row">
-				<p class="white_text">LIIKENTEEN HOITAA FÖLI</p>
+				<p class="white_text">JULKINEN LIIKENNE</p>
 				<div class="small_buttons">
 					<a href="./index_en.html"><img src="images/EN.png" alt="Finnish"/></a>
 					<img src="images/underscore.png" alt="Underscore" 
@@ -358,11 +358,11 @@
 					</div>				
 				</div>			
 				<div class="column center-column">
-					<p>Turku on pieni kaupunki suurella sydämellä. Kaikkialle keskusta-alueella pääsee kävellen. Jos kuitenkin haluat ajella bussilla, Fölin kyydillä pääsee!
+					<p>Siirtymät tapahtumapaikkojen ja majoituksen välillä eivät ole pitkiä, mutta katso tarvittaessa <a target="_blank" href="https://www.foli.fi/fi">www.foli.fi</a> eli Turun seudun joukkoliikenne palvelee. Föli-sovelluksesta löydät reittioppaat ja voit ostaa lipun, mutta kaikissa Fölin busseissa toimii myös lähimaksu!
 					</p>
 					
 					<p>
-					Katsele Fölin aikataulut ja pysäkit Fölin sivuilta: <a target="_blank" href="https://www.foli.fi/fi">www.foli.fi</a>
+					<a href="https://www.utu.fi/fi/yliopisto/turun-kampus/pys%C3%A4kointi">Pysäköinti</a> yliopiston pysäköintialueilla on maksullista arkisin 8-16. Muuna aikana parkkialueet ovat vapaasti käytössä lukuun ottamatta henkilökohtaisia pysäköintiluvallisia paikkoja.
 					</p>
 										
 				</div>
@@ -375,13 +375,15 @@
 		</div>
     </div>
 	
+
+	
 	<!-- Kaupunki -->
 	
-	<div class="container scaling-div" id="kaupunki">		
+	<div class="container scaling-div" id="kaupunki" style="min-height:400px;">		
 		<div class="shadow">
 
 			<div class="row first-row">
-				<p class="white_text">KAUPUNKI (TURKU)</p>
+				<p class="white_text">EXCUT (TURUSSA)</p>
 				<div class="small_buttons">
 					<a href="./index_en.html"><img src="images/EN.png" alt="Finnish"/></a>
 					<img src="images/underscore.png" alt="Underscore"
@@ -390,19 +392,43 @@
 					onclick="closeWindowById('kaupunki')">
 				</div>
 			</div>
-			
-			<div class="row columns">
-				<div class="column">					
-				</div>			
-				<div class="column center-column">
-					<p>Kaikki tärkeimmät festien paikat löydät kartasta <a target="_blank" href="https://www.google.com/maps/d/u/0/edit?mid=11-wyEpiTdtNGoaNKeXHR9YSbIXhprjE&usp=sharing">TÄÄLTÄ</a></p>
+
+			<div class="row columns">		
+				<div class="column single_column" >
+					<div class="tooltip">
+						<img id="excu_turku_nappi" 
+						src="images/excu_turun_linna.png" 
+						alt="turun linna"
+						class="imageShadow"/>
+						<div class="tooltiptext">
+							<p>Tule kiertämään Turun linnaa! Kierroksella tulevat tutuiksi linnan arki ja juhlat, sodat ja rakkaudet. Kuulet linnan keskiaikaisesta elämästä ja renessanssihovin loistosta. Kierroksella kierretään linnan vanhin osa.
+							</p>
+						</div>					
+					</div>
 					
-					<p>
-					Turun yliopisto sijaitsee aitiopaikalla aivan joen rannalla ison kukkulan päällä. Sinne pääsee vaikka tiedon portaita kiipeämällä. 
-					</p>
-										
-				</div>
-				<div class="column">					
+					<div class="tooltip">
+					<img id="excu_analytica_nappi" 
+						src="images/excu_top_analytica.webp" 
+						alt="top_analytica" 
+						class="imageShadow"/>
+						<div class="tooltiptext">
+							<p>Top Analytica Oy Ab tarjoaa yrityksille ja tutkimuslaitoksille analyysi- ja tutkimuspalveluja. Laitteemme soveltuvat mm. prosessi-, kemian-, paperi- ja metalliteollisuuden ongelmien selvittämiseen sekä rakennusteollisuuden materiaalien haitta-aineanalyyseihin. 
+							</p>
+						</div>					
+					</div>
+					<div class="tooltip">
+						<img id="excu_kakola_nappi" 
+							src="images/excu_kakola.webp" alt="kakola brewing"
+							onclick="clickElement(this, byId('excu_kakola'))"
+							class="imageShadow"/>
+						<div class="tooltiptext">
+							<p>Kakola Brewing Company on vuonna 2018 perustettu naapurustopanimo Kakolanmäellä Turussa. Kakola Brewing Companyn takana on kolme ystävystä, jotka jakavat intohimon tehdä paikallisesta elämästä maukasta.
+							Visionamme on yhdistää olut yksinkertaiseen ja vaivattomaan muotoiluun sekä tuoda olut osaksi paikallista elämää.
+							Laadukkaat raaka-aineet, huumori ja inhimillinen ote ovat arvojemme ytimessä.
+							Oluemme pannaan pienissä erissä, juuri sinua varten.
+							</p>
+						</div>					
+					</div>
 				</div>
 			</div>
 		</div>
@@ -413,7 +439,7 @@
 	<div class="container scaling-div" id="majoitus">		
 		<div class="shadow">
 			<div class="row first-row">
-				<p class="white_text">MAJOITUSJUTTUJA</p>
+				<p class="white_text">MAJOITUS</p>
 				<div class="small_buttons">
 					<a href="./index_en.html"><img src="images/EN.png" alt="Finnish"/></a>
 					<img src="images/underscore.png" alt="Underscore" 
@@ -428,18 +454,16 @@
 				<div style="max-width:90%">
 					<p>Festien majoitus sijaitsee Turun Steiner-koululla osoitteessa Kaivokatu 12, ja siellä nukutaan tuttuun tapaan lattialla eri tiloissa ainejärjestöittäin. Majoituksesta on matkaa yliopistolle 900 m, T-talolle 1,3 km, Q-talolle 1,7 km ja keskustaan 1,9 km. Majoituksen ja keskustan väliä kulkevat bussit 32, 42, ja 53(A). Bussiaikataulut näkee osoitteesta <a href="https://www.foli.fi/fi">https://www.foli.fi/fi</a> tai Föli-sovelluksesta.</p>
 					<p>Steiner-koulun ovet ovat koko viikonlopun lukossa, ja tästä syystä siellä on erikseen määriteltyinä aikoina kaksi valvojaa, jotka ovat avaamassa ovea, ohjaamassa festiläisiä oikeisiin tiloihin ja vastaamassa majoituspuhelimeen.</p>
-					<p>Majoituspuhelimen numero on [numero].</p>
+
 					<p>Majoitusvalvojat päivystävät Steiner-koululla seuraavasti:<br>
 					Perjantaina klo 17:00-18:30 ja 21:00-00:00.<br>
 					Lauantaina klo 00:00-10:00, 14:00-17:00 ja 21:00-00:00.<br>
 					Sunnuntaina klo 00:00-11:00 (muista kellojen siirto la-su yönä tunnilla taaksepäin, viimeinen päivystysvuoro loppuu klo 11 talviaikaa tai klo 12 kesäaikaa).
 					
 					<p>Jos ennen perjantai-illan sitsejä ei halua tai ehdi käydä majoituksessa, tavaroille järjestetään kuljetus yliopistolta. Sunnuntaina majoituksesta on poistuttava viimeistään klo 12:00.</p>
-					<p>SUIHKUINFO</p>
-					<p>Majoituksessa tarjoillaan aamupala lauantaina klo 09:00-10:00.</p>
-					<p>Alkoholin ja muiden päihteiden käyttäminen ja esillä pitäminen on ehdottomasti kiellettyä koulun tiloissa ja alueella.</p>
-					<p>Majoituksen järjestäjä on Turun yliopiston matemaattisten ja fysikaalisten tieteiden opiskelijoiden yhdistys Delta ry, https://delta.utu.fi/. Festitoimikunnan puheenjohtajana tänä vuonna toimii Sanni Kivistö (Telegram @sekivisto). </p>
-					<p>Häirintäyhdyshenkilöinä toimii [nimet ja Telegramit].</p>
+
+					<p><i>Alkoholin ja muiden päihteiden käyttäminen ja esillä pitäminen on ehdottomasti kiellettyä koulun tiloissa ja alueella.</i></p>
+
 				</div>
 				</center>			
 			</div>
@@ -462,21 +486,28 @@
 				</div>
 			</div>
 			
-			<div class="row columns">
-				<div class="column">					
-				</div>			
-				<div class="column center-column">
-					<p>Integraatiofesteillä oli tänä vuonna tekijöitä. Kiitokset, ruusut ja miksei risutkin voi lähettää suoraan <a href="https://delta.utu.fi/yhdistys/yhteystiedot">Turun yliopiston matemaattisten ja fysikaalisten tieteiden opiskelijoiden yhdistys Delta ry:lle </a> </p>
-										
+			<div class="row columns">			
+				<center>
+				<div style="max-width:90%; margin:auto;">
+				
+					<p><b>Järjestävä taho:</b> <br/>Turun yliopiston matemaattisten ja fysikaalisten tieteiden opiskelijoiden yhdistys Delta ry<br/>
+					delta@utu.fi<br/>
+					<a href="https://delta.utu.fi/">https://delta.utu.fi/</a><br/>
+					<b>Integraatiofest 2024 -toimikunnan puheenjohtaja:</b> <br/>
+					Sanni Kivistö <br/>
+					sekivi@utu.fi<br/>
+					TG: @sekivisto </p>
+
+					<p>Hätänumero: 112<br/>
+					Myrkytystietokeskus: 0800 147111</p> 				
 				</div>
-				<div class="column">					
-				</div>
+				</center>					
 			</div>
 		</div>
     </div>
 	
 	<!-- Video -->
-	<div class="container scaling-div" id="video" style="overflow: hidden;">		
+	<div class="container scaling-div" style="display:none" id="video" style="overflow: hidden;">		
 		<div class="shadow">
 
 			<div class="row first-row">
@@ -486,15 +517,16 @@
 					<img src="images/underscore.png" alt="Underscore" 
 					onclick="minimizeWindowById('video');">
 					<img src="images/cross.png" alt="Cross" 
-					onclick="closeWindowById('video');
-					byId('hypevideo').pause();
+					onclick="closeWindowById('video');					
+					setTimeout(()=>{
+					byId('hypevideo').src = byId('hypevideo').src;
+					byId('video').style.display='none';}, 2000)
 					">
 				</div>
 			</div>
 			
 			<div class="row columns videocontainer">
-				<iframe class="videoframe" frameborder=0 allowfullscreen class=""  src="https://echo360.org.uk/media/12523a67-16f2-49fd-a0ba-b42849ac10f7/public?autoplay=true&automute=false">
-				</iframe>
+				<iframe class="videoframe" id="hypevideo" src="https://www.youtube.com/embed/eU50gJjBseU?si=mm48TCofrypWw6xG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 			</div>
 		</div>
     </div>
@@ -523,16 +555,16 @@
 					</div>
 					<div id="liikenne_nappi" onclick="clickElement(this, byId('liikenne'))">
 						<img src="images/shield.png" alt="Liikenne">
-						<p>Julkinen liikenne</p>
+						<p>Liikkuminen ja pysäköinti</p>
 					</div>
 				</div>			
 				<div class="column center-column">
 					
 					<div id="kaupunki_nappi" onclick="clickElement(this, byId('kaupunki'))">
 						<img src="images/posankka.png" alt="Posankka">
-						<p>Kaupunkikartta ja excut</p>
+						<p>Kaupunki ja excut</p>
 					</div>
-					<div id="video_nappi" onclick="clickElement(this, byId('video'))">
+					<div id="video_nappi" onclick="clickElement(this, byId('video'));byId('video').style.display='block';">
 						<img src="images/dance.gif" alt="DELTAAA">
 						<p>HYPEVIDEO</p>
 					</div>
@@ -593,7 +625,7 @@
 	["aikataulu_lauantai",750],
 	["aikataulu_sunnuntai",750]]
 	if (window.screen.availWidth > 768 ) {
-		napit.forEach(([e,w]) => registerWindowCreator(byId(e+"_nappi"), byId(e), w));
+		//napit.forEach(([e,w]) => registerWindowCreator(byId(e+"_nappi"), byId(e), w));
 	}
 	
 	</script>

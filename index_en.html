@@ -21,7 +21,6 @@
 	}
 	
 	function clickElement(el, elmnt, win){
-		//elmnt.style.display='block';
 		elmnt.classList.toggle('open_window');
 		elmnt.style.zIndex=curZ+1;
 		elmnt.scrollIntoView()		
@@ -305,7 +304,7 @@
 		<div class="shadow">
 		
 			<div class="row first-row">
-				<p class="white_text">FEST TIMETABLE</p>
+				<p class="white_text">TIMETABLES</p>
 				<div class="small_buttons">
 					<a href="./index.html"><img src="images/FI.png" alt="Finnish"/></a>
 					<img src="images/underscore.png" alt="Underscore"
@@ -341,7 +340,7 @@
 		<div class="shadow">
 
 			<div class="row first-row">
-				<p class="white_text">LIIKENTEEN HOITAA FÖLI</p>
+				<p class="white_text">PUBLIC TRANSPORTATION</p>
 				<div class="small_buttons">
 					<a href="./index.html"><img src="images/FI.png" alt="Finnish"/></a>
 					<img src="images/underscore.png" alt="Underscore" 
@@ -358,11 +357,10 @@
 					</div>				
 				</div>			
 				<div class="column center-column">
-					<p>Turku is a small town with a big heart! Everwhere in the ceter is accessible by foot.If you're looking to take the bus, Föli is the recommended option!
-					</p>
+					<p>The distances between event venues and accommodation are not long, but if needed, the Turku region's public transport, <a target="_blank" href="https://www.foli.fi/fi">Foli</a>, will be available. You can find route guides and buy tickets through the Föli app, but all Föli buses also accept contactless payments! </p>
 					
 					<p>
-					See bus timetables: <a target="_blank" href="https://www.foli.fi/fi">www.foli.fi</a>
+					<a href="https://www.utu.fi/en/university/turku-campus/parking">Parking</a> in university parking areas is chargeable on weekdays 8-16. At other times, the parking areas are freely available, except for spaces reserved for personal parking permits.
 					</p>
 										
 				</div>
@@ -377,11 +375,11 @@
 	
 	<!-- Kaupunki -->
 	
-	<div class="container scaling-div" id="kaupunki">		
+	<div class="container scaling-div" id="kaupunki" style="min-height:400px;">		
 		<div class="shadow">
 
 			<div class="row first-row">
-				<p class="white_text">THE CITY (TURKU)</p>
+				<p class="white_text">EXCURSIONS (IN TURKU)</p>
 				<div class="small_buttons">
 					<a href="./index.html"><img src="images/FI.png" alt="Finnish"/></a>
 					<img src="images/underscore.png" alt="Underscore"
@@ -391,18 +389,39 @@
 				</div>
 			</div>
 			
-			<div class="row columns">
-				<div class="column">					
-				</div>			
-				<div class="column center-column">
-					<p>All important locations are marked on the map <a target="_blank" href="https://www.google.com/maps/d/u/0/edit?mid=11-wyEpiTdtNGoaNKeXHR9YSbIXhprjE&usp=sharing">HERE</a></p>
+			<div class="row columns">		
+				<div class="column single_column" >
+					<div class="tooltip">
+						<img id="excu_turku_nappi" 
+						src="images/excu_turun_linna.png" 
+						alt="turun linna"
+						class="imageShadow"/>
+						<div class="tooltiptext">
+							<p>During the guided tour of Turku Castle you will hear about everyday life, celebrations, war and love within the Castle walls. You will hear stories about life in the middle ages and the glamour in the renaissance court..The tour will go through the medieval part of the Castle.
+							</p>
+						</div>					
+					</div>
 					
-					<p>
-					The University of Turku is loated on top of a hill by the river with a great view. Come see for yourself.
-					</p>
-										
-				</div>
-				<div class="column">					
+					<div class="tooltip">
+					<img id="excu_analytica_nappi" 
+						src="images/excu_top_analytica.webp" 
+						alt="top_analytica" 
+						class="imageShadow"/>
+						<div class="tooltiptext">
+							<p>Top Analytica Oy Ab offers analytical and research services to companies and research institutes. Our devices are suitable for example process, chemistry, paper and metal industries, and asbestos analysis of building materials. 
+							</p>
+						</div>					
+					</div>
+					<div class="tooltip">
+						<img id="excu_kakola_nappi" 
+							src="images/excu_kakola.webp" alt="kakola brewing"
+							onclick="clickElement(this, byId('excu_kakola'))"
+							class="imageShadow"/>
+						<div class="tooltiptext">
+							<p>Kakola Brewing Company is a neighborhood brewery founded in 2018 on Kakolanmäki in Turku. Behind Kakola Brewing Company are three friends who feel the local life, who share a passion to make everyday living better. Our Vision is to combine beer with simple and effortless design and to bring beer into local life. High-quality ingredients, humor and a human touch are at the core of our values. Our beer is brewed in small batches, just for you.
+							</p>
+						</div>					
+					</div>
 				</div>
 			</div>
 		</div>
@@ -413,7 +432,7 @@
 	<div class="container scaling-div" id="majoitus">		
 		<div class="shadow">
 			<div class="row first-row">
-				<p class="white_text">LODGINGS</p>
+				<p class="white_text">ACCOMODATION</p>
 				<div class="small_buttons">
 					<a href="./index.html"><img src="images/FI.png" alt="Finnish"/></a>
 					<img src="images/underscore.png" alt="Underscore" 
@@ -428,17 +447,15 @@
 				<div style="max-width:90%">
 				<p>Accommodation for IntegraatioFest is located at Turun Steiner-koulu(a school), Kaivokatu 12. Sleeping happens on the floor and one needs their own bedding and sleeping pad. People are divided to sleep in different spaces with other people from their own organization.
 				Distance from the lodgings to the University is 900 meters, 1.3 km to T-talo, 1.7 km to Q-talo and 1.9 km to the city centre. Bus lines between the accommodation and city centre are numbers 32, 42, ja 53A. Bus timetables can be found at <a href="https://www.foli.fi/en">https://www.foli.fi/en</a> or in the Föli-app.</p>
-				<p>The doors at the school are locked during the weekend and therefore one can visit the accommodation only at certain predetermined times. During these times there will be two monitors present to open the door, guide people to their sleeping spaces and answer the phone. 
-				Phone number for the accommodation is: [number].</p>
+				<p>The doors at the school are locked during the weekend and therefore one can visit the accommodation only at certain predetermined times. During these times there will be two monitors present to open the door, guide people to their sleeping spaces and answer the phone. </p>
 				<p>Monitors are present at the school as follows:<br>
 				Friday at 17:00-18:30 and 21:00-00:00.<br>
 				Saturday at 00:00-10:00, 14:00-17:00 and 21:00-00:00.<br>
 				Sunday at 00:00-11:00 (remember the end of Daylight saving time. Accommodation will close at 11:00 Eastern European Time or at 12:00 Eastern European Summer Time)</p>
 				<p>Transportation for luggage from the University to the accommodation will be organized if one does not wish to visit the accommodation before the start of Friday’s Sitz Party. On Sunday one must leave the lodgings by 12:00.</p>
-				<p>SHOWERINFO</p>
-				<p>Breakfast will be served at the accommodation on Saturday at 09:00-10:00. </p>
-				<p>Consuming alcohol or other substances or having them visible at the school premises is strictly forbidden.</p>
-				<p>Organizer for the accommodation is Turun yliopiston matemaattisten ja fysikaalisten tieteiden opiskelijoiden yhdistys Delta ry, https://delta.utu.fi/in-english/what-is-delta. The head of this year’s IntegraatioFest committee is Sanni Kivistö (Telegram @sekivisto). The harassment contact persons are [names and Telegrams]</p>
+
+				<p><i>Consuming alcohol or other substances or having them visible at the school premises is strictly forbidden.</i></p>
+				
 				</div>
 				</center>
 			</div>
@@ -465,7 +482,13 @@
 				<div class="column">					
 				</div>			
 				<div class="column center-column">
-					<p>IntegrationFest24 had people working on it. Any communication should be directed to <a href="https://delta.utu.fi/yhdistys/yhteystiedot">student organization for the mathematical and physical sciences Delta ry</a> </p>
+					<p>Chair of Integraatiofest 2024 committee:<br/>
+						Sanni Kivistö <br/>
+						sekivi@utu.fi<br/>
+						TG: @sekivisto </p>
+
+						<p>Emergency number: 112<br/>
+						Poison information center: 0800 147111</p>
 										
 				</div>
 				<div class="column">					
@@ -476,24 +499,25 @@
 	
 	<!-- Video -->
 	
-	<div class="container scaling-div" id="video" >		
+	<div class="container scaling-div" style="display:none" id="video" style="overflow: hidden;">		
 		<div class="shadow">
 
 			<div class="row first-row">
 				<p class="white_text">HYPE</p>
 				<div class="small_buttons">
-					<a href="./index.html"><img src="images/FI.png" alt="Finnish"/></a>
+					<a href="./index_en.html"><img src="images/EN.png" alt="Finnish"/></a>
 					<img src="images/underscore.png" alt="Underscore" 
 					onclick="minimizeWindowById('video');">
 					<img src="images/cross.png" alt="Cross" 
 					onclick="closeWindowById('video');
-					byId('hypevideo').pause();">
+					byId('hypevideo').src = byId('hypevideo').src;
+					setTimeout(()=>{byId('video').style.display='none';}, 2000)
+					">
 				</div>
 			</div>
-
-			<div class="videocontainer" style="overflow:hidden">
-				<iframe class="videoframe" frameborder=0 allowfullscreen class=""  src="https://echo360.org.uk/media/12523a67-16f2-49fd-a0ba-b42849ac10f7/public?autoplay=true&automute=false">
-				</iframe>
+			
+			<div class="row columns videocontainer">
+				<iframe class="videoframe" id="hypevideo" src="https://www.youtube.com/embed/eU50gJjBseU?si=mm48TCofrypWw6xG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 			</div>
 		</div>
     </div>
@@ -528,9 +552,9 @@
 					
 					<div id="kaupunki_nappi" onclick="clickElement(this, byId('kaupunki'))">
 						<img src="images/posankka.png" alt="Posankka">
-						<p>City map and excursions</p>
+						<p>City and excursions</p>
 					</div>					
-					<div id="video_nappi" onclick="clickElement(this, byId('video'))">
+					<div id="video_nappi" onclick="clickElement(this, byId('video'));byId('video').style.display='block';">
 						<img src="images/dance.gif" alt="DELTAAA">
 						<p>HYPE VIDEO</p>
 					</div>
@@ -543,7 +567,7 @@
 					</div>
 					<div id="yhteys_nappi" onclick="clickElement(this, byId('yhteys'))">
 						<img src="images/phone.png" alt="Phone">
-						<p>Contact information</p>
+						<p>Contact info</p>
 					</div>
 				</div>
 			</div>
