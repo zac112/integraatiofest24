@@ -24,10 +24,19 @@
 		elmnt.classList.toggle('open_window');
 		elmnt.style.zIndex=curZ+1;
 		elmnt.scrollIntoView()		
-	}</script>
+	}
+	function spawnBus(){
+		let bus = document.createElement('img');
+		bus.src="images/bus.png";
+		bus.classList.add("moving-image");
+		bus.style.top = (Math.random()*100)+"%";
+		console.log(bus);
+		document.body.appendChild(bus);
+	}
+	</script>
 </head>
-<body>
-	<div class="header-row" >
+<body style="overflow:hidden;">
+	<div class="header-row" >	
 		<p>Integraatiofest 2024</p>
 	</div>
 	
@@ -354,7 +363,7 @@
 			<div class="row columns">
 				<div class="column">	
 					<div class="viewport">
-					<img src="images/bus.png" alt="Moving Image" class="moving-image" style="animation-delay:2.5s;left:-100%">
+					<img src="images/bus.png" alt="Moving Image" class="moving-image" style="animation-delay:2.5s;left:-100%" onclick="spawnBus();">
 					</div>				
 				</div>			
 				<div class="column center-column">
@@ -368,7 +377,7 @@
 				</div>
 				<div class="column">	
 					<div class="viewport">
-					<img src="images/bus.png" alt="Moving Image" class="moving-image">
+					<img src="images/bus.png" alt="Moving Image" class="moving-image" onclick="spawnBus();">
 					</div>
 				</div>
 			</div>
