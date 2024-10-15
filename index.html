@@ -25,7 +25,7 @@
 		elmnt.style.zIndex=curZ+1;
 		elmnt.scrollIntoView()		
 	}
-	function spawnBus(el, event){	
+	function spawnBus(){	
 		let bus = document.createElement('img');
 		let speed = 3+Math.random()*3;
 		bus.src="images/bus.png";
@@ -38,54 +38,52 @@
 	</script>
 </head>
 <body style="overflow-x:hidden;">
-	<div class="header-row" >	
+	<div class="header-row imageShadow" style="z-index:2">	
 		<p>Integraatiofest 2024</p>
 	</div>
 	
-	<!-- Sponssit -->
-	<div class="left" id="sponssit" >
+	<div class="left">
 		
-		<div class="shadow" >
+		<div class="" >
 
-			<div class="row first-row" style="z-index:0">
+			<div class="row first-row pic" style="z-index:0">
 				<p class="white_text">TURUN FESTIT TARJOAA!</p>
 				
 			</div>
 			
-			<div class="row sponssi-columns">		
+			<div class="row pic-columns">		
 				<table>
-				<tr><td><img src="images/sponsorit/TEK.png"/></td></tr>
-				<tr><td><img src="images/sponsorit/mal.png"/></td></tr>
-				<tr><td><img src="images/sponsorit/Algorithmiq.png"/></td></tr>
-				<tr><td><img src="images/sponsorit/Bluefors.png"/></td></tr>
+				<tr><td><img src="images/TEK.png"/></td></tr>
+				<tr><td><img src="images/mal.png"/></td></tr>
+				<tr><td><img src="images/Algorithmiq.png"/></td></tr>
+				<tr><td><img src="images/Bluefors.png"/></td></tr>
 				</table>				
 			</div>
 		</div>
     </div>
 	
-	<!-- Sponssit small screen-->
-	<div class="small_sponssi" id="sponssit_all" >
+	<div class="small_pic">
 		
-		<div class="shadow" >
+		<div class="" >
 
-			<div class="row first-row" style="z-index:0">
+			<div class="row first-row pic" style="z-index:0">
 				<p class="white_text">TURUN FESTIT TARJOAA!</p>				
 			</div>
 			
-			<div class="row sponssi-columns">
+			<div class="row pic-columns">
 			<div style="row center-column">			
 				<table style="border-spacing:5px;">
 				<tr>
-					<td><img src="images/sponsorit/TEK.png"/></td>
-					<td><img src="images/sponsorit/mal.png"/></td>
-					<td><img src="images/sponsorit/Algorithmiq.png"/></td>
-					<td><img src="images/sponsorit/Bluefors.png"/></td>
+					<td><img src="images/TEK.png"/></td>
+					<td><img src="images/mal.png"/></td>
+					<td><img src="images/Algorithmiq.png"/></td>
+					<td><img src="images/Bluefors.png"/></td>
 				</tr>
 				<tr>
-					<td><img src="images/sponsorit/lygas.png"/></td>
-					<td><img src="images/sponsorit/If.png"/></td>
-					<td><img src="images/sponsorit/KOFF.png"/></td>
-					<td><img src="images/sponsorit/loimu.png"/></td>
+					<td><img src="images/lygas.png"/></td>
+					<td><img src="images/If.png"/></td>
+					<td><img src="images/KOFF.png"/></td>
+					<td><img src="images/loimu.png"/></td>
 				</tr>
 				</table>
 			</div>	
@@ -365,7 +363,7 @@
 			<div class="row columns">
 				<div class="column">	
 					<div class="viewport">
-					<img src="images/bus.png" alt="Moving Image" class="moving-image" style="animation-delay:2.5s;left:-100%" onclick="spawnBus(this, event);">
+					<img src="images/bus.png" alt="Moving Image" class="moving-image" style="animation-delay:2.5s;left:-100%" onclick="spawnBus();">
 					</div>				
 				</div>			
 				<div class="column center-column">
@@ -429,8 +427,8 @@
 					</div>
 					<div class="tooltip">
 						<img id="excu_kakola_nappi" 
-							src="images/excu_kakola.webp" alt="kakola brewing"
-							onclick="clickElement(this, byId('excu_kakola'))"
+							src="images/excu_kakola.webp" 
+							alt="kakola brewing"
 							class="imageShadow"/>
 						<div class="tooltiptext">
 							<p>Kakola Brewing Company on vuonna 2018 perustettu naapurustopanimo Kakolanmäellä Turussa. Kakola Brewing Companyn takana on kolme ystävystä, jotka jakavat intohimon tehdä paikallisesta elämästä maukasta.
@@ -467,9 +465,9 @@
 					<p>Steiner-koulun ovet ovat koko viikonlopun lukossa, ja tästä syystä siellä on erikseen määriteltyinä aikoina kaksi valvojaa, jotka ovat avaamassa ovea, ohjaamassa festiläisiä oikeisiin tiloihin ja vastaamassa majoituspuhelimeen.</p>
 
 					<p>Majoitusvalvojat päivystävät Steiner-koululla seuraavasti:<br>
-					Perjantaina klo 17:00-18:30 ja 21:00-00:00.<br>
-					Lauantaina klo 00:00-10:00, 14:00-17:00 ja 21:00-00:00.<br>
-					Sunnuntaina klo 00:00-11:00 (muista kellojen siirto la-su yönä tunnilla taaksepäin, viimeinen päivystysvuoro loppuu klo 11 talviaikaa tai klo 12 kesäaikaa).
+					<b>Perjantaina</b> klo 17:00-18:30 ja 21:00-00:00.<br>
+					<b>Lauantaina</b> klo 00:00-10:00, 14:00-17:00 ja 21:00-00:00.<br>
+					<b>Sunnuntaina</b> klo 00:00-12:00 (muista kellojen siirto la-su yönä tunnilla taaksepäin).
 					
 					<p>Jos ennen perjantai-illan sitsejä ei halua tai ehdi käydä majoituksessa, tavaroille järjestetään kuljetus yliopistolta. Sunnuntaina majoituksesta on poistuttava viimeistään klo 12:00.</p>
 
@@ -594,21 +592,21 @@
 			</div>
 		</div>
     </div>
-		<!-- Sponssit small screen-->
-	<div class="right" id="sponssit_right" >
-		
-		<div class="shadow" >
 
-			<div class="row first-row" style="z-index:0">
+	<div class="right">
+		
+		<div class="" >
+
+			<div class="row first-row pic" style="z-index:0">
 				<p class="white_text">TURUN FESTIT TARJOAA!</p>				
 			</div>
 			
-			<div class="row sponssi-columns">				
+			<div class="row pic-columns">				
 				<table>
-				<tr><td><img src="images/sponsorit/lygas.png"/></td></tr>
-				<tr><td><img src="images/sponsorit/If.png"/></td></tr>
-				<tr><td><img src="images/sponsorit/KOFF.png"/></td></tr>
-				<tr><td><img src="images/sponsorit/loimu.png"/></td></tr>
+				<tr><td><img src="images/lygas.png"/></td></tr>
+				<tr><td><img src="images/If.png"/></td></tr>
+				<tr><td><img src="images/KOFF.png"/></td></tr>
+				<tr><td><img src="images/loimu.png"/></td></tr>
 				</table>
 			</div>
 		</div>
@@ -626,19 +624,6 @@
 		cont[i].style.left = (window.innerWidth/2 - 750/2)+"px";		
 	}
 	curZ = cont.length;	
-
-	var napit = [["aikataulu",750],
-	["liikenne",750],
-	["kaupunki",750],
-	["majoitus",750],
-	["yhteys",750], 
-	["aikataulu_perjantai",750],
-	["aikataulu_lauantai",750],
-	["aikataulu_sunnuntai",750]]
-	if (window.screen.availWidth > 768 ) {
-		//napit.forEach(([e,w]) => registerWindowCreator(byId(e+"_nappi"), byId(e), w));
-	}
-	
 	</script>
 </body>
 </html>
