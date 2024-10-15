@@ -1,4 +1,10 @@
 /* General body and container styles */
+*{
+	user-select:none;
+}
+img {
+	cursor:grab;
+}
 body, html {
     margin: 0;
     padding: 0;
@@ -301,6 +307,7 @@ tr{
         /*max-height: 800px; /* Allows container to grow beyond the viewport if needed */
 		position:static;
 		width: 400px;
+		cursor:auto;
     }
 
     .columns {
