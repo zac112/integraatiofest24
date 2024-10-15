@@ -594,9 +594,10 @@
 	var cont = document.getElementsByClassName("container")
 	var title = document.getElementsByClassName("header-row")[0]
 	for (var i=0;i<cont.length;i++){	
-		dragElement(cont[i]);
-		registerTouch(cont[i]);			
-		
+		if (window.innerWidth > 768 ) {
+			dragElement(cont[i]);
+			registerTouch(cont[i]);			
+		}
 		cont[i].style.top = (window.innerHeight/2 - 260)+"px";
 		cont[i].style.left = (window.innerWidth/2 - 750/2)+"px";		
 	}
