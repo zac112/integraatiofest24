@@ -105,7 +105,7 @@
 						<td colspan="2">Distribution of conference passes <br><i>/ Delta office, Quantum 1. floor</i></td>
 					</tr>
 					<tr class="aikatauluTauluTokaRivi">										
-						<td class="aikatauluVsolu">10.00-14.00</td>
+						<td class="aikatauluVsolu">10.00-15.10</td>
 						<td colspan="2">Lectures <br><i>/ Natura IX</i></td>
 					</tr>
 					<tr>
@@ -251,6 +251,10 @@
 					<tr>
 						<td class="aikatauluVsolu">14.15-16.15</td>
 						<td colspan="2">PLANCS/IMC <br><i>/ QM2, QM3</i></td>
+					</tr>
+					<tr>
+						<td class="aikatauluVsolu">15.00-19.00</td>
+						<td colspan="2">Checkpoint race</td>
 					</tr>
 					<tr>
 						<td class="aikatauluVsolu">20.00-04.00</td>
@@ -472,14 +476,20 @@
 			<div class="row columns">	
 				<center>			
 				<div style="max-width:90%">
-				<p>Accommodation for IntegraatioFest is located at Turun Steiner-koulu(a school), Kaivokatu 12. Sleeping happens on the floor and one needs their own bedding and sleeping pad. People are divided to sleep in different spaces with other people from their own organization.
+				<p>Accommodation for IntegraatioFest is located at Turun Steiner-koulu(a school), <a href="https://maps.app.goo.gl/p2QU13HEzZtCBpKu6" target="_blank">Kaivokatu 12</a>. Sleeping happens on the floor and one needs their own bedding and sleeping pad. People are divided to sleep in different spaces with other people from their own organization.
 				Distance from the lodgings to the University is 900 meters, 1.3 km to T-talo, 1.7 km to Q-talo and 1.9 km to the city centre. Bus lines between the accommodation and city centre are numbers 32, 42, ja 53A. Bus timetables can be found at <a href="https://www.foli.fi/en">https://www.foli.fi/en</a> or in the Föli-app.</p>
 				<p>The doors at the school are locked during the weekend and therefore one can visit the accommodation only at certain predetermined times. During these times there will be two monitors present to open the door, guide people to their sleeping spaces and answer the phone. </p>
+				
+				<div onclick="let D = byId('sisaankaynti').style.display; byId('sisaankaynti').style.display = (D=='block' ? 'none' : 'block');"><p><b>Click here to see a picture of the entrance:</b></p>
+				<img id="sisaankaynti" src="images/majoitus.jpg" style="width:100%;display:none;"></img></div>
+					
 				<p>Monitors are present at the school as follows:<br>
 				<b>Friday</b> at 17:00-18:30 and 21:00-00:00.<br>
 				<b>Saturday</b> at 00:00-10:00, 14:00-17:00 and 21:00-00:00.<br>
 				<b>Sunday</b> at 00:00-12:00 (Remember the end of Daylight saving time.)</p>
 				<p>Transportation for luggage from the University to the accommodation will be organized if one does not wish to visit the accommodation before the start of Friday’s Sitz Party. On Sunday one must leave the lodgings by 12:00.</p>
+				
+				<p>The accommodation only has a couple of showers so everyone who has chosen to stay at the school also has a chance to shower on Saturday at 10-14 at Iskeri sportshall, <a href="https://maps.app.goo.gl/TUVJuNdzihfq1KfGA" target="_blank"> Rehtorinpellonkatu 4</a>.</p>
 
 				<p><i>Consuming alcohol or other substances or having them visible at the school premises is strictly forbidden.</i></p>
 				
@@ -490,6 +500,25 @@
     </div>
  
 	<!-- Yhteys -->
+		<div class="container scaling-div" id="harokuva" >		
+		<div class="shadow">
+
+			<div class="row first-row">
+				<p class="white_text">HÄIRINTÄYHDYSHENKILÖT</p>
+				<div class="small_buttons">
+					<a href="./index_en.html"><img src="images/EN.png" alt="Finnish"/></a>
+					<img src="images/underscore.png" alt="Underscore" 
+					onclick="minimizeWindowById('harokuva');">
+					<img src="images/cross.png" alt="Cross" 
+					onclick="closeWindowById('harokuva')">
+				</div>
+			</div>
+			
+			<div class="row columns">
+				<img src="images/yhdyshenkilot.jpg" style="max-width:90%; margin:auto;" alt="contact people"></img>				
+			</div>
+		</div>
+    </div>
 	
 	<div class="container scaling-div" id="yhteys" >		
 		<div class="shadow">
@@ -510,12 +539,16 @@
 				</div>			
 				<div class="column center-column">
 					<p>Chair of Integraatiofest 2024 committee:<br/>
-						Sanni Kivistö <br/>
-						sekivi@utu.fi<br/>
-						TG: @sekivisto </p>
-
-						<p>Emergency number: 112<br/>
-						Poison information center: 0800 147111</p>
+					Sanni Kivistö <br/>
+					sekivi@utu.fi<br/>
+					TG: @sekivisto </p>
+					<div onclick="clickElement(this, byId('harokuva'));"><b>Harassment contact people (click to show image)</b>
+					<div style="display:flex;">
+					<div style="width:50%">Ella Karlsson<br>050 413 3389<br>TG: @ellakarlsson</div>
+					<div style="width:50%">Kristian Juselius<br>044 050 2221<br>TG: @KristianJuse</div>
+					</div></div>
+					<p>Emergency number: 112<br/>
+					Poison information center: 0800 147111</p>
 										
 				</div>
 				<div class="column">					
