@@ -24,7 +24,9 @@
 		elmnt.classList.toggle('open_window');
 		elmnt.style.zIndex=curZ+1;
 		elmnt.scrollIntoView()		
-	}</script>
+	}
+	var position = Math.random()<0.5;
+	</script>
 </head>
 <body>
 	<div class="header-row imageShadow" style="z-index:2">
@@ -46,6 +48,7 @@
 				<tr><td><img src="images/mal.png"/></td></tr>
 				<tr><td><img src="images/Algorithmiq.png"/></td></tr>
 				<tr><td><img src="images/Bluefors.png"/></td></tr>
+				<script>if (position){document.write('<tr><td><img src="images/fyysikkoseura.png"/></td></tr>')}</script>
 				</table>				
 			</div>
 		</div>
@@ -66,10 +69,13 @@
 					<td><img src="images/TEK.png"/></td>
 					<td><img src="images/mal.png"/></td>
 					<td><img src="images/Algorithmiq.png"/></td>
-					<td><img src="images/Bluefors.png"/></td>
 				</tr>
 				<tr>
+					<td><img src="images/Bluefors.png"/></td>
+					<td><img src="images/fyysikkoseura.png"/></td>
 					<td><img src="images/lygas.png"/></td>
+				</tr>
+				<tr>
 					<td><img src="images/If.png"/></td>
 					<td><img src="images/KOFF.png"/></td>
 					<td><img src="images/loimu.png"/></td>
@@ -649,6 +655,7 @@
 				<tr><td><img src="images/If.png"/></td></tr>
 				<tr><td><img src="images/KOFF.png"/></td></tr>
 				<tr><td><img src="images/loimu.png"/></td></tr>
+				<script>if (!position){document.write('<tr><td><img src="images/fyysikkoseura.png"/></td></tr>')}</script>
 				</table>			
 			</div>
 		</div>

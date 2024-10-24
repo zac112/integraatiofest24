@@ -408,6 +408,10 @@ tr{
 		width: 100px;
 	}
 	
+	.pic-columns tr {
+		height:auto;
+	}
+	
 	.left{
 		display:none;
 	}

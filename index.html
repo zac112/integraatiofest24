@@ -35,6 +35,7 @@
 		
 		document.body.appendChild(bus);
 	}
+	var position = Math.random()<0.5;
 	</script>
 </head>
 <body style="overflow-x:hidden;">
@@ -57,6 +58,7 @@
 				<tr><td><img src="images/mal.png"/></td></tr>
 				<tr><td><img src="images/Algorithmiq.png"/></td></tr>
 				<tr><td><img src="images/Bluefors.png"/></td></tr>
+				<script>if (position){document.write('<tr><td><img src="images/fyysikkoseura.png"/></td></tr>')}</script>
 				</table>				
 			</div>
 		</div>
@@ -77,16 +79,19 @@
 					<td><img src="images/TEK.png"/></td>
 					<td><img src="images/mal.png"/></td>
 					<td><img src="images/Algorithmiq.png"/></td>
-					<td><img src="images/Bluefors.png"/></td>
 				</tr>
 				<tr>
+					<td><img src="images/Bluefors.png"/></td>
+					<td><img src="images/fyysikkoseura.png"/></td>
 					<td><img src="images/lygas.png"/></td>
+				</tr>
+				<tr>
 					<td><img src="images/If.png"/></td>
 					<td><img src="images/KOFF.png"/></td>
 					<td><img src="images/loimu.png"/></td>
 				</tr>
 				</table>
-			</div>	
+			</div>			
 			</div>
 		</div>
     </div>
@@ -671,6 +676,7 @@
 				<tr><td><img src="images/If.png"/></td></tr>
 				<tr><td><img src="images/KOFF.png"/></td></tr>
 				<tr><td><img src="images/loimu.png"/></td></tr>
+				<script>if (!position){document.write('<tr><td><img src="images/fyysikkoseura.png"/></td></tr>')}</script>
 				</table>
 			</div>
 		</div>
